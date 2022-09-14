@@ -6,7 +6,7 @@
 
 ## Description
 
-Peronal Portfilio Page
+Personal Portfolio Page
 
 ## Technologies
 
@@ -21,7 +21,7 @@ Peronal Portfilio Page
 - run 'yarn start'
 
 ## Available commands
-- develop # developing site
+- dev # developing site
 - start # clean develop
 - build # production build
 - serve # serving production build
