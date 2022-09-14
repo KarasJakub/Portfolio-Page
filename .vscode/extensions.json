@@ -1,0 +1,23 @@
+{
+  "recommendations": [
+    "formulahendry.auto-rename-tag",
+    "coenraads.bracket-pair-colorizer-2",
+    "wayou.vscode-todo-highlight",
+    "vscode-icons-team.vscode-icons",
+    "mf.vscode-styled-components",
+    "formulahendry.auto-close-tag",
+    "nixon.env-cmd-file-syntax",
+    "dsznajder.es7-react-js-snippets",
+    "dbaeumer.vscode-eslint",
+    "graphql.vscode-graphql",
+    "ecmel.vscode-html-css",
+    "wix.vscode-import-cost",
+    "ms-vscode.vscode-typescript-next",
+    "rubymaniac.vscode-paste-and-indent",
+    "ionutvmi.path-autocomplete",
+    "christian-kohler.path-intellisense",
+    "esbenp.prettier-vscode",
+    "burkeholland.simple-react-snippets",
+    "shardulm94.trailing-spaces"
+  ]
+}
