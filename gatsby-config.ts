@@ -24,7 +24,7 @@ const config: GatsbyConfig = {
         fonts: {
           google: [
             {
-              family: "Poppins",
+              family: "Montserrat",
               variants: ["300", "400", "500", "700", "800"],
               subsets: ["latin-ext"]
             }
