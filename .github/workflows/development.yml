@@ -25,10 +25,9 @@ jobs:
           yarn
           yarn build
 
-      - name: Upload files
-        uses: easingthemes/ssh-deploy@main
-        env:
-          SOURCE: "public/"
-          REMOTE_HOST: ${{ secrets.DEPLOY_HOST }}
-          REMOTE_USER: ${{ secrets.DEPLOY_USER }}
-          TARGET: "/domains/jakubkaras.pl/public_html/landing-dev"
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.2
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
