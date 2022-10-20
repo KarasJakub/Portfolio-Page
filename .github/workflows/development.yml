@@ -1,0 +1,33 @@
+on:
+  workflow_dispatch:
+
+name: Development Build and Deploy
+
+jobs:
+  build-and-deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v2
+        with:
+          lfs: true
+
+      - name: Fetch LFS objects
+        run: git lfs checkout
+
+      - name: Create env file
+        run: |
+          touch .env
+
+      - name: Build Project
+        run: |
+          yarn
+          yarn build
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.2
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}

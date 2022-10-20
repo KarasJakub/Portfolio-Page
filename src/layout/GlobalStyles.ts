@@ -15,9 +15,9 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1.6rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
-    background-color: #101010;
+    background-color: #1F1F23;
     color: white;
   }
 
