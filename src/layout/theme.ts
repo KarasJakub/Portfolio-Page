@@ -17,7 +17,7 @@ const theme = {
     extraBold: 800
   },
   color: {
-    primary: ""
+    primary: "#752BFF"
   },
   MQ: {
     xs: `@media (min-width: ${breakpoints.xs}em)`,
