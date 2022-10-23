@@ -8239,6 +8239,13 @@ react-refresh@^0.9.0:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.9.0.tgz#71863337adc3e5c2f8a6bfddd12ae3bfe32aafbf"
   integrity sha512-Gvzk7OZpiqKSkxsQvO/mbTN1poglhmAV7gR/DdIrRrSMXraRQQlfikRJOr3Nb9GTMPC5kof948Zy6jJZIFtDvQ==
 
+react-scroll-section@^3.2.5:
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/react-scroll-section/-/react-scroll-section-3.2.5.tgz#ac086b03206912ed7e188d2c71fc89adfafee32e"
+  integrity sha512-zirZM01Z2fA9HezCMQlGDi+S4OkJZZb0S997lHOzYKSyHefB5rGUXKi2DR/njXpiKTWMCA4qqmp7mkTxqGhxIA==
+  dependencies:
+    smoothscroll-polyfill "^0.4.4"
+
 react-side-effect@^2.1.0:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-2.1.2.tgz#dc6345b9e8f9906dc2eeb68700b615e0b4fe752a"
@@ -8822,6 +8829,11 @@ slugify@^1.6.1:
   version "1.6.5"
   resolved "https://registry.yarnpkg.com/slugify/-/slugify-1.6.5.tgz#c8f5c072bf2135b80703589b39a3d41451fbe8c8"
   integrity sha512-8mo9bslnBO3tr5PEVFzMPIWwWnipGS0xVbYf65zxDqfNwmzYn1LpiKNrR6DlClusuvo+hDHd1zKpmfAe83NQSQ==
+
+smoothscroll-polyfill@^0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/smoothscroll-polyfill/-/smoothscroll-polyfill-0.4.4.tgz#3a259131dc6930e6ca80003e1cb03b603b69abf8"
+  integrity sha512-TK5ZA9U5RqCwMpfoMq/l1mrH0JAR7y7KRvOBx0n2869aLxch+gT9GhN3yUfjiw+d/DiF1mKo14+hd62JyMmoBg==
 
 snake-case@^3.0.4:
   version "3.0.4"

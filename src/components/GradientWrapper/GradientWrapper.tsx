@@ -1,8 +1,12 @@
 import React from "react"
 import * as S from "./GradientWrapper.styled"
 
-const GradientWrapper = () => {
-  return <S.GradientWrapper>something</S.GradientWrapper>
+type BoxProps = {
+  children: React.ReactNode | React.ReactNode[]
+}
+
+const GradientWrapper = (props: BoxProps) => {
+  return <S.GradientWrapper>{props.children}</S.GradientWrapper>
 }
 
 export default GradientWrapper
