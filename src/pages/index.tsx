@@ -1,5 +1,13 @@
 import React from "react"
+import GradientWrapper from "components/GradientWrapper/GradientWrapper"
+import Navigation from "components/Navigation/Navigation"
 
 export default function Home() {
-  return <h1>Hello World!</h1>
+  return (
+    <>
+      <GradientWrapper>
+        <Navigation />
+      </GradientWrapper>
+    </>
+  )
 }
