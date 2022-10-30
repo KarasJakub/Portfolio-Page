@@ -1,11 +1,9 @@
 import React from "react"
 import * as S from "./Hero.styled"
 import SButtons from "components/Buttons/Buttons.styled"
-import { useImagesContext } from "context/ImagesContext"
-import { getImage } from "gatsby-plugin-image"
+import HeroImage from "../../assets/images/Hero_Image.svg"
 
 const Hero = () => {
-  const { HeroImage } = useImagesContext()
   return (
     <>
       <S.HeroWrapper>
@@ -30,7 +28,7 @@ const Hero = () => {
           </S.Paragraph>
           <SButtons.HeroButton>Check my work!</SButtons.HeroButton>
         </S.HeadingWrapper>
-        <S.Image image={getImage(HeroImage)} alt="Person working on computer" />
+        <S.Image src={HeroImage} alt="Person working on computer" />
       </S.HeroWrapper>
     </>
   )

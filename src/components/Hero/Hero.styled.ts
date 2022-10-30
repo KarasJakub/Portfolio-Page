@@ -1,4 +1,3 @@
-import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 export const HeroWrapper = styled.section`
@@ -94,7 +93,7 @@ export const Paragraph = styled.p`
   }
 `
 
-export const Image = styled(GatsbyImage)`
+export const Image = styled.img`
   width: 100%;
   max-width: 66rem;
   margin: 5rem auto;

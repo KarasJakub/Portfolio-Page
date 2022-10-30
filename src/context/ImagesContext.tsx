@@ -27,7 +27,7 @@ export const useImagesContext = () => React.useContext(ImagesContext)
 
 export const imagesQuery = graphql`
   query ImagesQuery {
-    HeroImage: file(name: { eq: "Hero_Image" }) {
+    Example: file(name: { eq: "" }) {
       childImageSharp {
         gatsbyImageData(
           quality: 100
