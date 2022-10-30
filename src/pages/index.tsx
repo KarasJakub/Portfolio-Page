@@ -2,6 +2,7 @@ import React from "react"
 import GradientWrapper from "components/GradientWrapper/GradientWrapper"
 import Navigation from "components/Navigation/Navigation"
 import Hero from "components/Hero/Hero"
+import About from "components/About/About"
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
           <Hero />
         </>
       </GradientWrapper>
+      <About />
     </>
   )
 }
