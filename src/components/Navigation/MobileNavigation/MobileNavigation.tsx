@@ -5,7 +5,7 @@ import { navigate } from "gatsby"
 import { useScrollSections } from "react-scroll-section"
 import * as S from "./MobileNavigation.styled"
 import * as SS from "../Navigation.styled"
-import { NavigationButton } from "pages/index.styled"
+import SButtons from "components/Buttons/Buttons.styled"
 
 interface Props {
   isMobileNavOpen: boolean
@@ -32,7 +32,7 @@ const MobileNavigation = (props: Props) => {
             {item.content}
           </SS.NavigationItem>
         ))}
-        <NavigationButton>Contact</NavigationButton>
+        <SButtons.NavigationButton>Contact</SButtons.NavigationButton>
       </S.NavigationList>
     </S.MobileNavigationWrapper>
   )
