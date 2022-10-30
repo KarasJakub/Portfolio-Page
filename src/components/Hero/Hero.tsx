@@ -1,6 +1,6 @@
 import React from "react"
 import * as S from "./Hero.styled"
-import { HeroButton } from "pages/index.styled"
+import SButtons from "components/Buttons/Buttons.styled"
 import { useImagesContext } from "context/ImagesContext"
 import { getImage } from "gatsby-plugin-image"
 
@@ -28,7 +28,7 @@ const Hero = () => {
             </a>
             .
           </S.Paragraph>
-          <HeroButton>Check my work!</HeroButton>
+          <SButtons.HeroButton>Check my work!</SButtons.HeroButton>
         </S.HeadingWrapper>
         <S.Image image={getImage(HeroImage)} alt="Person working on computer" />
       </S.HeroWrapper>
