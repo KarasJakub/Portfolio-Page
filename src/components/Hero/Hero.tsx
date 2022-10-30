@@ -11,7 +11,7 @@ const Hero = () => {
       <S.HeroWrapper>
         <S.HeadingWrapper>
           <S.PreName>Hello, I am</S.PreName>
-          <S.BigHeading>Jakub Karaś</S.BigHeading>
+          <S.BigHeading>Jakub Karaś.</S.BigHeading>
           <S.SmallHeading>
             I create <strong> something out of nothing</strong>.
           </S.SmallHeading>
