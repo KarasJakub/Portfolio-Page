@@ -19,6 +19,7 @@ export const AboutWrapper = styled.section`
   ${({ theme }) => theme.MQ.l} {
     flex-direction: row-reverse;
     justify-content: center;
+    padding: 15rem 0 10rem 0;
   }
 `
 
@@ -27,10 +28,12 @@ export const TextWrapper = styled.div`
   max-width: 62rem;
   margin: 0 auto;
   display: flex;
+  align-items: center;
   flex-direction: column;
 
   ${({ theme }) => theme.MQ.l} {
     margin: unset;
+    align-items: flex-start;
   }
 `
 
@@ -66,6 +69,16 @@ export const SectionTitle = styled.h2`
     transform: translateY(-300%);
     margin: 0 0 0 1rem;
   }
+
+  ${({ theme }) => theme.MQ.l} {
+    &:before,
+    :after {
+      content: none;
+    }
+    text-align: left;
+    font-size: 4rem;
+    margin: 0 0 1rem 0;
+  }
 `
 
 export const SectionParagraph = styled.p`
@@ -83,10 +96,16 @@ export const SectionParagraph = styled.p`
 export const Image = styled(GatsbyImage)`
   width: 24rem;
   max-width: 38rem;
-  border: 4px dotted ${({ theme }) => theme.color.primary};
+  outline: 2px dashed ${({ theme }) => theme.color.primary};
+  outline-offset: 7px;
   margin: 3rem auto;
 
   ${({ theme }) => theme.MQ.l} {
+    margin: 0 15rem 0 5rem;
+    width: 30rem;
+    align-self: baseline;
+  }
+  ${({ theme }) => theme.MQ.xl} {
     margin: 0 15rem 0 0;
     width: 30rem;
   }
@@ -100,10 +119,10 @@ export const Icons = styled.div`
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   justify-content: space-between;
+  margin: unset;
 
   ${({ theme }) => theme.MQ.l} {
     grid-template-columns: repeat(3, 1fr);
-    margin: unset;
     width: 70%;
   }
 `
