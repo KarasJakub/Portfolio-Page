@@ -1,3 +1,4 @@
+import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 export const AboutWrapper = styled.section`
@@ -61,4 +62,15 @@ export const SectionParagraph = styled.p`
   color: ${({ theme }) => theme.color.darkgrey};
   width: 90%;
   margin: 0 0 2rem 0;
+
+  & strong {
+    color: ${({ theme }) => theme.color.primary};
+    font-weight: 600;
+  }
+`
+
+export const Image = styled(GatsbyImage)`
+  width: 24rem;
+  max-width: 38rem;
+  border: 4px dotted ${({ theme }) => theme.color.primary};
 `

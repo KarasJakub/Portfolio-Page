@@ -1,7 +1,11 @@
+import { useImagesContext } from "context/ImagesContext"
+import { getImage } from "gatsby-plugin-image"
 import React from "react"
 import * as S from "./About.styled"
 
 const About = () => {
+  const { Personal_Image } = useImagesContext()
+
   return (
     <S.AboutWrapper>
       <S.TextWrapper>
@@ -13,8 +17,9 @@ const About = () => {
           out of nothing on the web. I started back in 2020 with fundamentals of
           web development and started creating my first&apos;s websites. At this
           point, my main focus is building modern and good-looking websites
-          along with new technologies, especially my favorite – React.js.
-          I&apos;m in 4th-grade Secondary School of Information Technology
+          along with new technologies, especially my favorite –{" "}
+          <strong>React.js</strong>. I&apos;m in 4th-grade Secondary School of
+          Information Technology
         </S.SectionParagraph>
         <S.SectionParagraph>
           I&apos;m in 4th-grade Secondary School of Information Technology
@@ -23,6 +28,7 @@ const About = () => {
           What technologies am I working with?
         </S.SectionParagraph>
       </S.TextWrapper>
+      <S.Image image={getImage(Personal_Image)} alt="Photo of author" />
     </S.AboutWrapper>
   )
 }
