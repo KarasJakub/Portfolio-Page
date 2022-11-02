@@ -19,7 +19,7 @@ export const AboutWrapper = styled.section`
   ${({ theme }) => theme.MQ.l} {
     flex-direction: row-reverse;
     justify-content: center;
-    padding: 15rem 0 10rem 0;
+    padding: 30rem 0 30rem 0;
   }
 `
 

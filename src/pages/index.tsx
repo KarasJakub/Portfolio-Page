@@ -13,8 +13,8 @@ export default function Home() {
           <Navigation />
           <Hero />
         </>
+        <About />
       </GradientWrapper>
-      <About />
       <CaseStudies />
     </>
   )
