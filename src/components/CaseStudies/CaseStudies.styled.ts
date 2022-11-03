@@ -2,15 +2,25 @@ import styled from "styled-components"
 
 export const ProjectsWrapper = styled.main`
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 export const CardsWrapper = styled.div`
   width: 100%;
+  max-width: 140rem;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   padding: 4rem 4rem;
+  flex-wrap: wrap;
+
+  ${({ theme }) => theme.MQ.m} {
+    flex-direction: row;
+  }
 `
 
 export const SectionTitle = styled.h2`

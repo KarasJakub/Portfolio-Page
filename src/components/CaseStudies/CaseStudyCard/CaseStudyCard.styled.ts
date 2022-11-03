@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 export const CardImage = styled(GatsbyImage)`
   width: 100%;
+  z-index: -1;
 `
 
 export const Title = styled.h3`
@@ -31,7 +32,7 @@ export const Paragraph = styled.p`
 
 export const CardWrapper = styled.div`
   width: 100%;
-  max-width: 57rem;
+  max-width: 35rem;
   position: relative;
   display: flex;
   align-items: center;
@@ -43,6 +44,11 @@ export const CardWrapper = styled.div`
   transition-property: transform opacity;
   margin-bottom: 5rem;
   overflow: hidden;
+  background-color: rgba(117, 43, 255, 0.4);
+
+  &:hover {
+    background-color: rgba(117, 43, 255, 0);
+  }
 
   &:hover ${Paragraph} {
     transform: translateY(4rem);
@@ -50,5 +56,13 @@ export const CardWrapper = styled.div`
   }
   &:hover ${Title} {
     transform: translateY(-4rem);
+  }
+
+  ${({ theme }) => theme.MQ.m} {
+    margin: 2rem;
+  }
+  ${({ theme }) => theme.MQ.xxl} {
+    max-width: 50rem;
+    margin: 4rem;
   }
 `
