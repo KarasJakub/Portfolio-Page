@@ -72,10 +72,6 @@ export const CardWrapper = styled.div`
   margin-bottom: 5rem;
   overflow: hidden;
 
-  &:hover {
-    background-color: rgba(117, 43, 255, 0);
-  }
-
   &:hover ${Paragraph} {
     transform: translateY(1.5rem);
     opacity: 1;
