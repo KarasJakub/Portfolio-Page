@@ -15,7 +15,7 @@ const HeroButton = styled(ButtonComponent)`
 `
 
 const CaseStudiesButton = styled(ButtonComponent)`
-  padding: 15px 35px;
+  padding: 15px 50px;
   margin: -2rem 0 5rem 0;
   font-size: 1.8rem;
   color: ${({ theme }) => theme.color.grey};
