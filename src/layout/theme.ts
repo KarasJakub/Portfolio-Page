@@ -21,7 +21,8 @@ const theme = {
     primary: "#752BFF",
     dark: "#111111",
     grey: "#CECECE",
-    darkgrey: "#A9A297"
+    darkgrey: "#A9A297",
+    darkpurple: "#38029A"
   },
   MQ: {
     xs: `@media (min-width: ${breakpoints.xs}em)`,
