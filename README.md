@@ -1,6 +1,6 @@
 <img alt="" src="" width="150" />
 
-# jakubkaras.pl
+# landing-dev.jakubkaras.pl (jakubkaras.pl)
 
 ## Status: `In progress`
 
