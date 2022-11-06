@@ -1,6 +1,10 @@
 import styled from "styled-components"
 
-export const SkillCardWrapper = styled.div`
+export interface Custom {
+  active: boolean
+}
+
+export const SkillCardWrapper = styled.div<Custom>`
   width: 100%;
   max-width: 30rem;
   max-height: 6rem;
@@ -11,6 +15,7 @@ export const SkillCardWrapper = styled.div`
   padding: 2rem;
   border: 3px solid ${({ theme }) => theme.color.darkpurple};
   margin: 1rem 0;
+  border-right: 1px solid ${({ active }) => (active ? "#00bbff" : "#2b2b2b")};
 `
 
 export const Title = styled.h3`
