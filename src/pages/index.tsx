@@ -6,6 +6,7 @@ import About from "components/About/About"
 import CaseStudies from "components/CaseStudies/CaseStudies"
 import Skills from "components/Skills/Skills"
 import Sidebar from "components/SideBar/Sidebar"
+import Footer from "components/Footer/Footer"
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       </GradientWrapper>
       <CaseStudies />
       <Skills />
+      <Footer />
     </>
   )
 }
