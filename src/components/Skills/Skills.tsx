@@ -15,13 +15,13 @@ const steps = [
   {
     name: "Programming skills",
     description:
-      "After I learned the basics of creating pages, I started learning new technologies: webpack, node.js, react.js, etc… They were totally game changers, projects I’ve built with them taught (and still are teaching :P) me so much about problem-solving, humility and specific mindset in programming. I think these experiences are making me a better developer every day. Currently, my leading technology is React (especially Gatsby).",
+      "After I learned the basics of creating pages, I started learning new technologies: webpack, node.js, react.js, etc… They were totally game changers, projects I’ve built with them taught (and still are teaching 😛) me so much about problem-solving, humility and specific mindset in programming. I think these experiences are making me a better developer every day. Currently, my leading technology is React (especially Gatsby).",
     image: Programming_Icon
   },
   {
     name: "Design skills",
     description:
-      "I adore pretty websites, but design just isn’t my cup of tea. I prefer coding websites rather than designing them :P. I designed several websites in my career, but I haven’t made any UI/UX course, I like the idea of Just-In-Time-Learning :P. For occasionally designing I use Figma",
+      "I adore pretty websites, but design just isn’t my cup of tea. I prefer coding websites rather than designing them 😛. I designed several websites in my career, but I haven’t made any UI/UX course, I like the idea of Just-In-Time-Learning 😛. For occasionally designing I use Figma",
     image: Design_Icon
   }
 ]
@@ -46,6 +46,23 @@ const Skills = () => {
           <S.Text>{steps[activeStep].description}</S.Text>
         </S.Content>
       </S.MobilesWrapper>
+      <S.ComputerWrapper>
+        <S.ComputerTextWrapper>
+          <S.SectionTitle>{steps[activeStep].name}</S.SectionTitle>
+          <S.Text>{steps[activeStep].description}</S.Text>
+        </S.ComputerTextWrapper>
+        <S.Content>
+          {steps.map((step, index) => (
+            <SkillsCard
+              title={step.name}
+              image={step.image}
+              key={step.name}
+              active={index === activeStep}
+              onClick={() => setActiveStep(index)}
+            />
+          ))}
+        </S.Content>
+      </S.ComputerWrapper>
     </S.RootWrapper>
   )
 }

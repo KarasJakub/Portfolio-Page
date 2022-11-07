@@ -17,6 +17,13 @@ export const SkillCardWrapper = styled.div<Custom>`
   margin: 1rem 0;
   transition: 0.2s background-color ease-in-out;
   cursor: pointer;
+  ${({ theme }) => theme.MQ.l} {
+    max-width: 35rem;
+    max-height: 8rem;
+    padding: 25px 25px;
+    border: 5px solid ${({ theme }) => theme.color.darkpurple};
+    margin: 0.7rem 0;
+  }
 `
 
 export const Title = styled.h3`
@@ -28,4 +35,7 @@ export const Title = styled.h3`
 
 export const Icon = styled.img`
   max-width: 3.5rem;
+  ${({ theme }) => theme.MQ.l} {
+    width: 4rem;
+  }
 `
