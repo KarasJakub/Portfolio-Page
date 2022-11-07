@@ -8,14 +8,15 @@ export const SkillCardWrapper = styled.div<Custom>`
   width: 100%;
   max-width: 30rem;
   max-height: 6rem;
-  background-color: ${({ theme }) => theme.color.dark};
+  background-color: ${({ active }) => (active ? "#38029A" : "#111111")};
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
   border: 3px solid ${({ theme }) => theme.color.darkpurple};
   margin: 1rem 0;
-  border-right: 1px solid ${({ active }) => (active ? "#00bbff" : "#2b2b2b")};
+  transition: 0.2s background-color ease-in-out;
+  cursor: pointer;
 `
 
 export const Title = styled.h3`

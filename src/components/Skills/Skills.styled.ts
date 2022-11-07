@@ -63,6 +63,7 @@ export const Text = styled.p`
   font-family: Montserrat, sans-serif;
   color: ${({ theme }) => theme.color.darkgrey};
   max-width: 30rem;
+  min-height: 38rem;
   font-size: 1.8rem;
   margin: 2rem 0;
 `
