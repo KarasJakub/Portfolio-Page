@@ -32,7 +32,7 @@ const Skills = () => {
   return (
     <S.RootWrapper>
       <S.MobilesWrapper>
-        <S.SectionTitle>Languages</S.SectionTitle>
+        <S.SectionTitle>{steps[activeStep].name}</S.SectionTitle>
         <S.Content>
           {steps.map((step, index) => (
             <SkillsCard

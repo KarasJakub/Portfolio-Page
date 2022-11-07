@@ -18,7 +18,7 @@ export const SectionTitle = styled.h2`
   margin: 5rem auto;
   text-align: center;
 
-  &:before,
+  /* &:before,
   :after {
     content: "";
     display: inline-block;
@@ -39,14 +39,14 @@ export const SectionTitle = styled.h2`
     background-color: rgba(103, 103, 103, 0.5);
     transform: translateY(-300%);
     margin: 0 0 0 1rem;
-  }
+  } */
 
   ${({ theme }) => theme.MQ.l} {
-    &:before,
+    /* &:before,
     :after {
       width: 20rem;
       transform: translateY(-600%);
-    }
+    } */
     font-size: 4rem;
   }
 `
