@@ -57,7 +57,6 @@ export const Form = styled.form`
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 `
 export const TopInputsWrapper = styled.div`
   width: 100%;
@@ -75,6 +74,14 @@ export const Input = styled.input`
   width: 100%;
   outline: none;
   transition: border 0.1s ease-in-out;
+
+  &:focus {
+    border-bottom: 5px solid #bbbbbb;
+  }
+
+  &.error {
+    border-bottom: 5px solid red;
+  }
 `
 
 export const Textarea = styled(Input)`
@@ -83,4 +90,11 @@ export const Textarea = styled(Input)`
   min-width: 100%;
   max-width: 100%;
   height: 20rem;
+  margin-bottom: 3rem;
+`
+
+export const BottomWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 `

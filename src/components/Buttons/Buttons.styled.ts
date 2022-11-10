@@ -21,10 +21,19 @@ const CaseStudiesButton = styled(ButtonComponent)`
   color: ${({ theme }) => theme.color.grey};
 `
 
+const FormButton = styled(ButtonComponent)`
+  padding: 15px 0;
+  margin: 3rem 0;
+  font-size: 1.8rem;
+  max-width: 25rem;
+  color: ${({ theme }) => theme.color.grey};
+`
+
 const SButtons = {
   NavigationButton,
   HeroButton,
-  CaseStudiesButton
+  CaseStudiesButton,
+  FormButton
 }
 
 export default SButtons
