@@ -2,6 +2,10 @@ import styled from "styled-components"
 
 export const ContactWrapper = styled.section`
   width: 100%;
+
+  ${({ theme }) => theme.MQ.xl} {
+    margin-bottom: 15rem;
+  }
 `
 
 export const ContactTitle = styled.h2`
@@ -51,6 +55,9 @@ export const FormWrapper = styled.div`
   width: 90%;
   max-width: 75rem;
   margin: 0 auto;
+  ${({ theme }) => theme.MQ.m} {
+    width: 80%;
+  }
 `
 
 export const Form = styled.form`
@@ -63,6 +70,11 @@ export const TopInputsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  ${({ theme }) => theme.MQ.m} {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `
 
 export const Input = styled.input`
@@ -82,6 +94,10 @@ export const Input = styled.input`
   &.error {
     border-bottom: 5px solid red;
   }
+
+  ${({ theme }) => theme.MQ.m} {
+    width: 48%;
+  }
 `
 
 export const Textarea = styled(Input)`
@@ -97,4 +113,9 @@ export const BottomWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  ${({ theme }) => theme.MQ.m} {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `

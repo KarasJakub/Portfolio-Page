@@ -27,6 +27,10 @@ const FormButton = styled(ButtonComponent)`
   font-size: 1.8rem;
   max-width: 25rem;
   color: ${({ theme }) => theme.color.grey};
+
+  ${({ theme }) => theme.MQ.m} {
+    padding: 15px 20px;
+  }
 `
 
 const SButtons = {
