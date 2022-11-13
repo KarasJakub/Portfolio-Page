@@ -64,6 +64,14 @@ export const Form = styled.form`
   width: 100%;
   display: flex;
   flex-direction: column;
+
+  &.none {
+    display: none;
+  }
+
+  &.flex {
+    display: flex;
+  }
 `
 export const TopInputsWrapper = styled.div`
   width: 100%;
@@ -117,5 +125,41 @@ export const BottomWrapper = styled.div`
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
+  }
+`
+
+export const FormErrorMessage = styled.div`
+  width: 100%;
+  padding: 1rem;
+
+  & p {
+    text-align: center;
+    color: white;
+  }
+
+  &.none {
+    display: none;
+  }
+
+  &.block {
+    display: block;
+  }
+`
+
+export const FormMessage = styled.div`
+  width: 100%;
+  padding: 1rem;
+
+  & p {
+    text-align: center;
+    color: white;
+  }
+
+  &.none {
+    display: none;
+  }
+
+  &.block {
+    display: block;
   }
 `

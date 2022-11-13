@@ -31,6 +31,13 @@ const FormButton = styled(ButtonComponent)`
   ${({ theme }) => theme.MQ.m} {
     padding: 15px 20px;
   }
+
+  &:disabled {
+    filter: grayscale(1);
+    &:hover {
+      background-color: ${({ theme }) => theme.color.dark};
+    }
+  }
 `
 
 const SButtons = {
