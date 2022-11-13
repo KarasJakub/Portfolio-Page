@@ -1,12 +1,18 @@
 import React from "react"
 import * as S from "./ButtonComponent.styled"
 
-type ButtonProps = {
+interface ButtonProps {
   children: React.ReactNode | React.ReactNode[]
+  disabled?: boolean
+  submit?: boolean
 }
 
 const ButtonComponent = (props: ButtonProps) => {
-  return <S.ButtonComponent {...props}>{props.children}</S.ButtonComponent>
+  return (
+    <S.ButtonComponent {...props} disabled={props.disabled ?? false}>
+      {props.children}
+    </S.ButtonComponent>
+  )
 }
 
 export default ButtonComponent
