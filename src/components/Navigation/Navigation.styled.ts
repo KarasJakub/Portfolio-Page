@@ -21,8 +21,18 @@ export const NavigationContent = styled.div`
   align-items: center;
   max-width: 170rem;
   margin: auto;
+  transition-timing-function: ease-in;
+  transition: 0.2s;
   ${({ theme }) => theme.MQ.l} {
     margin: 3rem auto;
+  }
+
+  &.showNav {
+    opacity: 1;
+  }
+
+  &.hideNav {
+    opacity: 0;
   }
 `
 

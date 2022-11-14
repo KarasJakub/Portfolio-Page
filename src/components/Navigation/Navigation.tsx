@@ -1,13 +1,14 @@
 import React from "react"
-import logo from "assets/icons/logo_icon.svg"
 import HamburgerButton from "./HamburgerButton/HamburgerButton"
 import MobileNavigation from "./MobileNavigation/MobileNavigation"
+import SButtons from "../Buttons/Buttons.styled"
+import * as S from "./Navigation.styled"
+import logo from "assets/icons/logo_icon.svg"
+import { useScrollDirection } from "../../hooks/useScrollDirection"
 import { useLocation } from "@reach/router"
 import { navigate } from "gatsby"
 import { Link } from "gatsby"
 import { useScrollSections } from "react-scroll-section"
-import * as S from "./Navigation.styled"
-import SButtons from "../Buttons/Buttons.styled"
 
 export const items = [
   {
@@ -37,9 +38,14 @@ const Navigation = () => {
     setIsMobileNavOpen(prevState => !prevState)
   }
 
+  const scrollDirection = useScrollDirection()
+  console.log(scrollDirection)
+
   return (
     <S.NavigationWrapper>
-      <S.NavigationContent>
+      <S.NavigationContent
+        className={`${scrollDirection === "up" ? "showNav" : "hideNav"}`}
+      >
         <Link to="/">
           <S.Logo src={logo} alt="Personal Logo" />
         </Link>
