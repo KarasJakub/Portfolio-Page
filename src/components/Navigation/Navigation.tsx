@@ -19,12 +19,12 @@ export const items = [
     content: "About me"
   },
   {
-    id: "skills",
-    content: "Skills"
-  },
-  {
     id: "portfolio",
     content: "Portfolio"
+  },
+  {
+    id: "skills",
+    content: "Skills"
   }
 ]
 
@@ -56,7 +56,15 @@ const Navigation = () => {
               {link.content}
             </S.NavigationItem>
           ))}
-          <SButtons.NavigationButton>Contact</SButtons.NavigationButton>
+          <SButtons.NavigationButton
+            onClick={() =>
+              location.pathname === "/"
+                ? sections.find(section => section.id === "contact").onClick()
+                : navigate("/")
+            }
+          >
+            Contact
+          </SButtons.NavigationButton>
         </S.NavigationList>
         <HamburgerButton
           toggleNavigation={toggleNavigation}

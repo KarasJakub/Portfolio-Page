@@ -9,6 +9,7 @@ import Sidebar from "components/SideBar/Sidebar"
 import Footer from "components/Footer/Footer"
 import Contact from "components/Contact/Contact"
 import SEO from "components/SEO/SEO"
+import { Section } from "react-scroll-section"
 
 export default function Home() {
   return (
@@ -23,13 +24,23 @@ export default function Home() {
       <GradientWrapper>
         <>
           <Navigation />
-          <Hero />
+          <Section id="home">
+            <Hero />
+          </Section>
         </>
-        <About />
+        <Section id="about">
+          <About />
+        </Section>
       </GradientWrapper>
-      <CaseStudies />
-      <Skills />
-      <Contact />
+      <Section id="portfolio">
+        <CaseStudies />
+      </Section>
+      <Section id="skills">
+        <Skills />
+      </Section>
+      <Section id="contact">
+        <Contact />
+      </Section>
       <Footer />
     </>
   )
