@@ -1,13 +1,14 @@
 import React from "react"
-import logo from "assets/icons/logo_icon.svg"
 import HamburgerButton from "./HamburgerButton/HamburgerButton"
 import MobileNavigation from "./MobileNavigation/MobileNavigation"
+import SButtons from "../Buttons/Buttons.styled"
+import * as S from "./Navigation.styled"
+import logo from "assets/icons/logo_icon.svg"
+import { useScrollDirection } from "../../hooks/useScrollDirection"
 import { useLocation } from "@reach/router"
 import { navigate } from "gatsby"
 import { Link } from "gatsby"
 import { useScrollSections } from "react-scroll-section"
-import * as S from "./Navigation.styled"
-import SButtons from "../Buttons/Buttons.styled"
 
 export const items = [
   {
@@ -19,12 +20,12 @@ export const items = [
     content: "About me"
   },
   {
-    id: "skills",
-    content: "Skills"
-  },
-  {
     id: "portfolio",
     content: "Portfolio"
+  },
+  {
+    id: "skills",
+    content: "Skills"
   }
 ]
 
@@ -37,8 +38,24 @@ const Navigation = () => {
     setIsMobileNavOpen(prevState => !prevState)
   }
 
+  const scrollDirection = useScrollDirection()
+  const isBrowser = typeof window !== "undefined"
+
+  const ShowNav = () => {
+    if (isBrowser) {
+      if (scrollDirection === "up" && window.pageYOffset > 220) {
+        return "showNav"
+      }
+      if (scrollDirection === "down") {
+        return "hideNav"
+      }
+      return "showNavTop"
+    }
+    return
+  }
+
   return (
-    <S.NavigationWrapper>
+    <S.NavigationWrapper className={`${ShowNav()}`}>
       <S.NavigationContent>
         <Link to="/">
           <S.Logo src={logo} alt="Personal Logo" />
@@ -56,7 +73,15 @@ const Navigation = () => {
               {link.content}
             </S.NavigationItem>
           ))}
-          <SButtons.NavigationButton>Contact</SButtons.NavigationButton>
+          <SButtons.NavigationButton
+            onClick={() =>
+              location.pathname === "/"
+                ? sections.find(section => section.id === "contact").onClick()
+                : navigate("/")
+            }
+          >
+            Contact
+          </SButtons.NavigationButton>
         </S.NavigationList>
         <HamburgerButton
           toggleNavigation={toggleNavigation}

@@ -2,8 +2,10 @@ import React from "react"
 import * as S from "./Hero.styled"
 import SButtons from "components/Buttons/Buttons.styled"
 import HeroImage from "../../assets/images/Hero_Image.svg"
+import { useScrollSection } from "react-scroll-section"
 
 const Hero = () => {
+  const portfolioSection = useScrollSection("portfolio")
   return (
     <>
       <S.HeroWrapper>
@@ -26,7 +28,9 @@ const Hero = () => {
             </a>
             .
           </S.Paragraph>
-          <SButtons.HeroButton>Check my work!</SButtons.HeroButton>
+          <SButtons.HeroButton onClick={portfolioSection.onClick}>
+            Check my work!
+          </SButtons.HeroButton>
         </S.HeadingWrapper>
         <S.Image src={HeroImage} alt="Person working on computer" />
       </S.HeroWrapper>

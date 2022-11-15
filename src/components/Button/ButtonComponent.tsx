@@ -5,6 +5,7 @@ interface ButtonProps {
   children: React.ReactNode | React.ReactNode[]
   disabled?: boolean
   submit?: boolean
+  onClick?: () => void
 }
 
 const ButtonComponent = (props: ButtonProps) => {
