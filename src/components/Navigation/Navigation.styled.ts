@@ -9,9 +9,31 @@ export const NavigationWrapper = styled.nav`
   align-items: center;
   padding: 2rem;
   z-index: 5;
+  transition-timing-function: ease-in;
+  transition: 0.2s;
 
   ${({ theme }) => theme.MQ.s} {
     padding: 2rem 3rem;
+  }
+
+  &.showNav {
+    opacity: 1;
+    padding: 0;
+    background-image: linear-gradient(
+      90deg,
+      rgba(26, 56, 76, 1) 0%,
+      rgba(5, 15, 22, 1) 50%,
+      rgba(26, 56, 76, 1) 100%
+    );
+    box-shadow: inset 0px 53px 70px 40px rgba(15, 26, 32, 1);
+  }
+
+  &.showNavTop {
+    opacity: 1;
+  }
+
+  &.hideNav {
+    opacity: 0;
   }
 `
 
@@ -21,18 +43,8 @@ export const NavigationContent = styled.div`
   align-items: center;
   max-width: 170rem;
   margin: auto;
-  transition-timing-function: ease-in;
-  transition: 0.2s;
   ${({ theme }) => theme.MQ.l} {
     margin: 3rem auto;
-  }
-
-  &.showNav {
-    opacity: 1;
-  }
-
-  &.hideNav {
-    opacity: 0;
   }
 `
 

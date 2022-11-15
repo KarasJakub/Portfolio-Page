@@ -39,13 +39,19 @@ const Navigation = () => {
   }
 
   const scrollDirection = useScrollDirection()
-  console.log(scrollDirection)
 
+  const ShowNav = () => {
+    if (scrollDirection === "up" && window.pageYOffset > 220) {
+      return "showNav"
+    }
+    if (scrollDirection === "down") {
+      return "hideNav"
+    }
+    return "showNavTop"
+  }
   return (
-    <S.NavigationWrapper>
-      <S.NavigationContent
-        className={`${scrollDirection === "up" ? "showNav" : "hideNav"}`}
-      >
+    <S.NavigationWrapper className={`${ShowNav()}`}>
+      <S.NavigationContent>
         <Link to="/">
           <S.Logo src={logo} alt="Personal Logo" />
         </Link>
