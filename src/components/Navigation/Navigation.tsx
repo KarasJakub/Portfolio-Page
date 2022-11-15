@@ -39,16 +39,21 @@ const Navigation = () => {
   }
 
   const scrollDirection = useScrollDirection()
+  const isBrowser = typeof window !== "undefined"
 
   const ShowNav = () => {
-    if (scrollDirection === "up" && window.pageYOffset > 220) {
-      return "showNav"
+    if (isBrowser) {
+      if (scrollDirection === "up" && window.pageYOffset > 220) {
+        return "showNav"
+      }
+      if (scrollDirection === "down") {
+        return "hideNav"
+      }
+      return "showNavTop"
     }
-    if (scrollDirection === "down") {
-      return "hideNav"
-    }
-    return "showNavTop"
+    return
   }
+
   return (
     <S.NavigationWrapper className={`${ShowNav()}`}>
       <S.NavigationContent>
