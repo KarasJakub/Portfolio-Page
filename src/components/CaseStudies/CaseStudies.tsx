@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import * as S from "./CaseStudies.styled"
 import CaseStudyCard from "./CaseStudyCard/CaseStudyCard"
 import SButtons from "components/Buttons/Buttons.styled"
@@ -14,7 +15,9 @@ const CaseStudies = () => {
           <CaseStudyCard />
           <CaseStudyCard />
         </S.CardsWrapper>
-        <SButtons.CaseStudiesButton>Show more</SButtons.CaseStudiesButton>
+        <Link to="/portfolio">
+          <SButtons.CaseStudiesButton>Show more</SButtons.CaseStudiesButton>
+        </Link>
       </S.ProjectsWrapper>
     </>
   )
