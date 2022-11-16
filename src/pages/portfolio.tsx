@@ -14,7 +14,7 @@ const portfolio = () => {
       </SEO>
       <Navigation />
       <AllProjects />
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }

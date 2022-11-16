@@ -12,7 +12,6 @@ export const ContentWrapper = styled.section`
   max-width: 140rem;
 
   ${({ theme }) => theme.MQ.m} {
-    /* height: 100vh; */
     flex-direction: row;
   }
   ${({ theme }) => theme.MQ.xl} {

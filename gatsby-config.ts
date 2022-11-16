@@ -20,6 +20,26 @@ const config: GatsbyConfig = {
       }
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "markdown",
+        path: "./articles/"
+      }
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+          resolve: 'gatsby-remark-images',
+          options: {
+            quality: 100,
+          },
+          },
+        ]
+      }
+    },
+    {
       resolve: `gatsby-plugin-webfonts`,
       options: {
         fonts: {
