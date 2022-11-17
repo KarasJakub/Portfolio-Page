@@ -48,7 +48,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
 
   const createPostPromise = data.allMarkdownRemark.edges?.map(({ node }) => {
     actions.createPage({
-      path: `${node.frontmatter.slug}`,
+      path: `portfolio/${node.frontmatter.slug}`,
       component: path.resolve(`./src/templates/CaseStudyTemplate.tsx`),
       context: { id: node.id }
     })

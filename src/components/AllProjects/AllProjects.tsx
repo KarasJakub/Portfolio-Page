@@ -41,6 +41,8 @@ const AllProjects = () => {
             secondTechnology={frontmatter.secondTechnology}
             image={frontmatter.photo.childImageSharp.gatsbyImageData}
             alt={frontmatter.alt}
+            url={"/portfolio/" + frontmatter.slug}
+            key={frontmatter.slug}
           />
         </>
       ))}

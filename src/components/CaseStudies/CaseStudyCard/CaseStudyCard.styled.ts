@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
@@ -98,4 +99,8 @@ export const CardWrapper = styled.div`
       transform: translateY(3rem);
     }
   }
+`
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
 `

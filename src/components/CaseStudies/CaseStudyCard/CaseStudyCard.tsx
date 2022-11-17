@@ -9,20 +9,23 @@ interface Props {
   secondTechnology: string
   image: IGatsbyImageData
   alt: string
+  url: string
 }
 
 const CaseStudyCard = (props: Props) => {
   return (
     <>
-      <S.CardWrapper>
-        <S.CardImage image={getImage(props.image)} alt={props.alt} />
-        <S.Title>{props.title}</S.Title>
-        <S.Paragraph>{props.description}</S.Paragraph>
-        <S.TechnologiesBar>
-          <S.Technology>{props.firstTechnology}</S.Technology>
-          <S.Technology>{props.secondTechnology}</S.Technology>
-        </S.TechnologiesBar>
-      </S.CardWrapper>
+      <S.StyledLink to={props.url}>
+        <S.CardWrapper>
+          <S.CardImage image={getImage(props.image)} alt={props.alt} />
+          <S.Title>{props.title}</S.Title>
+          <S.Paragraph>{props.description}</S.Paragraph>
+          <S.TechnologiesBar>
+            <S.Technology>{props.firstTechnology}</S.Technology>
+            <S.Technology>{props.secondTechnology}</S.Technology>
+          </S.TechnologiesBar>
+        </S.CardWrapper>
+      </S.StyledLink>
     </>
   )
 }

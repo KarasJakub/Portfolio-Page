@@ -13,6 +13,7 @@ const CaseStudies = () => {
         edges {
           node {
             id
+            html
             frontmatter {
               slug
               title
@@ -45,6 +46,7 @@ const CaseStudies = () => {
                 secondTechnology={frontmatter.secondTechnology}
                 image={frontmatter.photo.childImageSharp.gatsbyImageData}
                 alt={frontmatter.alt}
+                url={"/portfolio/" + frontmatter.slug}
               />
             </>
           ))}
