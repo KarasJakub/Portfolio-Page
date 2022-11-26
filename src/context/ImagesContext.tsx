@@ -37,15 +37,5 @@ export const imagesQuery = graphql`
         )
       }
     }
-    API: file(name: { eq: "API" }) {
-      childImageSharp {
-        gatsbyImageData(
-          quality: 100
-          placeholder: BLURRED
-          layout: CONSTRAINED
-          formats: WEBP
-        )
-      }
-    }
   }
 `
