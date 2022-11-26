@@ -8,15 +8,42 @@ import TypeScriptIcon from "assets/icons/Typescript.svg"
 import WebpackIcon from "assets/icons/Webpack.svg"
 import NodeIcon from "assets/icons/Node.svg"
 import JavaScriptIcon from "assets/icons/Javascript.svg"
+import { motion, useAnimation } from "framer-motion"
+import { useInView } from "react-intersection-observer"
+import { useEffect } from "react"
 
 const About = () => {
   const { Personal_Image } = useImagesContext()
+  const { ref, inView } = useInView({
+    threshold: 0.3
+  })
+  const animation = useAnimation()
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        opacity: 1
+      })
+    }
+  }, [inView])
 
   return (
-    <S.AboutWrapper>
+    <S.AboutWrapper ref={ref}>
       <S.TextWrapper>
-        <S.SectionTitle>About me</S.SectionTitle>
-        <S.SectionParagraph>
+        <S.SectionTitle
+          as={motion.h2}
+          animate={animation}
+          initial={{ opacity: 0 }}
+          transition={{ delay: 0.2 }}
+        >
+          About me
+        </S.SectionTitle>
+        <S.SectionParagraph
+          as={motion.p}
+          animate={animation}
+          initial={{ opacity: 0 }}
+          transition={{ delay: 0.4 }}
+        >
           I&apos;m 19 years Junior Front-End Developer from{" "}
           <strong>Poland</strong>. My work is my passion, I{" "}
           <strong>enjoy</strong> building websites and developing my skillset
@@ -28,40 +55,87 @@ const About = () => {
           websites along with new technologies, especially my favorite –{" "}
           <strong>React.js</strong>.
         </S.SectionParagraph>
-        <S.SectionParagraph>
+        <S.SectionParagraph
+          as={motion.p}
+          animate={animation}
+          initial={{ opacity: 0 }}
+          transition={{ delay: 0.6 }}
+        >
           I&apos;m in 4th-grade Secondary School of Information Technology
         </S.SectionParagraph>
-        <S.SectionParagraph>
+        <S.SectionParagraph
+          as={motion.p}
+          animate={animation}
+          initial={{ opacity: 0 }}
+          transition={{ delay: 0.8 }}
+        >
           What technologies am I working with?
         </S.SectionParagraph>
         <S.Icons>
-          <S.IconBar>
+          <S.IconBar
+            as={motion.div}
+            animate={animation}
+            initial={{ opacity: 0 }}
+            transition={{ delay: 1 }}
+          >
             <img src={GatsbyIcon} alt="Gatsby Icon" />
             <p>Gatsby.js</p>
           </S.IconBar>
-          <S.IconBar>
+          <S.IconBar
+            as={motion.div}
+            animate={animation}
+            initial={{ opacity: 0 }}
+            transition={{ delay: 1.2 }}
+          >
             <img src={ReactIcon} alt="React Icon" />
             <p>React.js</p>
           </S.IconBar>
-          <S.IconBar>
+          <S.IconBar
+            as={motion.div}
+            animate={animation}
+            initial={{ opacity: 0 }}
+            transition={{ delay: 1.4 }}
+          >
             <img src={TypeScriptIcon} alt="Typescript Icon" />
             <p>Typescript</p>
           </S.IconBar>
-          <S.IconBar>
+          <S.IconBar
+            as={motion.div}
+            animate={animation}
+            initial={{ opacity: 0 }}
+            transition={{ delay: 1.6 }}
+          >
             <img src={WebpackIcon} alt="Webpack Icon" />
             <p>Webpack</p>
           </S.IconBar>
-          <S.IconBar>
+          <S.IconBar
+            as={motion.div}
+            animate={animation}
+            initial={{ opacity: 0 }}
+            transition={{ delay: 1.8 }}
+          >
             <img src={NodeIcon} alt="Node.js Icon" />
             <p>Node.js</p>
           </S.IconBar>
-          <S.IconBar>
+          <S.IconBar
+            as={motion.div}
+            animate={animation}
+            initial={{ opacity: 0 }}
+            transition={{ delay: 2 }}
+          >
             <img src={JavaScriptIcon} alt="Javascript Icon" />
             <p>Javascript</p>
           </S.IconBar>
         </S.Icons>
       </S.TextWrapper>
-      <S.Image image={getImage(Personal_Image)} alt="Photo of author" />
+      <S.MotionWrapper
+        as={motion.div}
+        animate={animation}
+        initial={{ opacity: 0 }}
+        transition={{ delay: 2.2 }}
+      >
+        <S.Image image={getImage(Personal_Image)} alt="Photo of author" />
+      </S.MotionWrapper>
     </S.AboutWrapper>
   )
 }

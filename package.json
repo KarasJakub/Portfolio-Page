@@ -43,6 +43,7 @@
     "react-google-recaptcha": "^2.1.0",
     "react-helmet": "^6.1.0",
     "react-hook-form": "^7.39.3",
+    "react-intersection-observer": "^9.4.1",
     "react-scroll-section": "^3.2.5",
     "styled-components": "^5.3.5"
   },

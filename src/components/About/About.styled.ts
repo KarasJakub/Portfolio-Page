@@ -110,6 +110,7 @@ export const Image = styled(GatsbyImage)`
     width: 30rem;
   }
 `
+export const MotionWrapper = styled.div``
 
 export const Icons = styled.div`
   width: 90%;
