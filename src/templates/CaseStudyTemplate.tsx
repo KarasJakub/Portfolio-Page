@@ -11,9 +11,10 @@ interface Props {
     markdownRemark: {
       html: string
       frontmatter: {
-        description: string
-        title: string
         slug: string
+        title: string
+        description: string
+        alt: string
         photo: IGatsbyImageData
       }
     }
@@ -46,7 +47,7 @@ const CaseStudyTemplate = ({ data }: Props) => {
                     data.markdownRemark.frontmatter.photo
                   ) as IGatsbyImageData
                 }
-                alt="Image"
+                alt={data.markdownRemark.frontmatter.alt}
               />
             </S.ImageWrapper>
           </S.TopContainer>
@@ -70,8 +71,6 @@ export const query = graphql`
         slug
         title
         description
-        firstTechnology
-        secondTechnology
         alt
         photo {
           childImageSharp {
