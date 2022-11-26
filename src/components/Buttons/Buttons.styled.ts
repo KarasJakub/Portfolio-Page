@@ -5,6 +5,15 @@ const NavigationButton = styled(ButtonComponent)`
   padding: 10px 40px;
   font-size: 1.8rem;
   color: ${({ theme }) => theme.color.grey};
+  animation: ShowButton 4s;
+  @keyframes ShowButton {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100;
+    }
+  }
 `
 
 const HeroButton = styled(ButtonComponent)`

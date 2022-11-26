@@ -9,6 +9,7 @@ import { useLocation } from "@reach/router"
 import { navigate } from "gatsby"
 import { Link } from "gatsby"
 import { useScrollSections } from "react-scroll-section"
+import { motion } from "framer-motion"
 
 export const items = [
   {
@@ -58,10 +59,17 @@ const Navigation = () => {
     <S.NavigationWrapper className={`${ShowNav()}`}>
       <S.NavigationContent>
         <Link to="/">
-          <S.Logo src={logo} alt="Personal Logo" />
+          <S.Logo
+            src={logo}
+            alt="Personal Logo"
+            as={motion.img}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+          />
         </Link>
         <S.NavigationList>
-          {items.map(link => (
+          {items.map((link, index) => (
             <S.NavigationItem
               onClick={() =>
                 location.pathname === "/"
@@ -69,6 +77,10 @@ const Navigation = () => {
                   : navigate("/")
               }
               key={link.id}
+              as={motion.li}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 * index }}
             >
               {link.content}
             </S.NavigationItem>
