@@ -4,6 +4,9 @@ import SkillsCard from "./SkillsCard/SkillsCard"
 import Languages_Icon from "assets/icons/Languages_Icon.svg"
 import Programming_Icon from "assets/icons/Programming_Icon.svg"
 import Design_Icon from "assets/icons/Design_Icon.svg"
+import { motion, useAnimation } from "framer-motion"
+import { useInView } from "react-intersection-observer"
+import { useEffect } from "react"
 
 const steps = [
   {
@@ -29,37 +32,93 @@ const steps = [
 const Skills = () => {
   const [activeStep, setActiveStep] = React.useState(0)
 
+  const { ref, inView } = useInView({
+    threshold: 0.3
+  })
+  const animation = useAnimation()
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        opacity: 1
+      })
+    }
+  }, [inView])
   return (
-    <S.RootWrapper>
+    <S.RootWrapper ref={ref}>
       <S.MobilesWrapper>
-        <S.SectionTitle>{steps[activeStep].name}</S.SectionTitle>
+        <S.SectionTitle
+          as={motion.h2}
+          animate={animation}
+          initial={{ opacity: 0 }}
+          transition={{ delay: 0.2 }}
+        >
+          {steps[activeStep].name}
+        </S.SectionTitle>
         <S.Content>
           {steps.map((step, index) => (
-            <SkillsCard
-              title={step.name}
-              image={step.image}
+            <S.MotionWrapper
+              as={motion.div}
+              animate={animation}
+              initial={{ opacity: 0 }}
+              transition={{ delay: 0.2 * index }}
               key={step.name}
-              active={index === activeStep}
-              onClick={() => setActiveStep(index)}
-            />
+            >
+              <SkillsCard
+                title={step.name}
+                image={step.image}
+                key={step.name}
+                active={index === activeStep}
+                onClick={() => setActiveStep(index)}
+              />
+            </S.MotionWrapper>
           ))}
-          <S.Text>{steps[activeStep].description}</S.Text>
+          <S.Text
+            as={motion.p}
+            animate={animation}
+            initial={{ opacity: 0 }}
+            transition={{ delay: 1 }}
+          >
+            {steps[activeStep].description}
+          </S.Text>
         </S.Content>
       </S.MobilesWrapper>
       <S.ComputerWrapper>
         <S.ComputerTextWrapper>
-          <S.SectionTitle>{steps[activeStep].name}</S.SectionTitle>
-          <S.Text>{steps[activeStep].description}</S.Text>
+          <S.SectionTitle
+            as={motion.h2}
+            animate={animation}
+            initial={{ opacity: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            {steps[activeStep].name}
+          </S.SectionTitle>
+          <S.Text
+            as={motion.p}
+            animate={animation}
+            initial={{ opacity: 0 }}
+            transition={{ delay: 0.4 }}
+          >
+            {steps[activeStep].description}
+          </S.Text>
         </S.ComputerTextWrapper>
         <S.Content>
           {steps.map((step, index) => (
-            <SkillsCard
-              title={step.name}
-              image={step.image}
+            <S.MotionWrapper
+              as={motion.div}
+              animate={animation}
+              initial={{ opacity: 0 }}
+              transition={{ delay: 0.2 * index }}
               key={step.name}
-              active={index === activeStep}
-              onClick={() => setActiveStep(index)}
-            />
+            >
+              <SkillsCard
+                title={step.name}
+                image={step.image}
+                key={step.name}
+                active={index === activeStep}
+                onClick={() => setActiveStep(index)}
+              />
+            </S.MotionWrapper>
           ))}
         </S.Content>
       </S.ComputerWrapper>

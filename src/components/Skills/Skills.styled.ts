@@ -82,3 +82,11 @@ export const ComputerTextWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `
+
+export const MotionWrapper = styled.div`
+  width: 100%;
+  max-width: 30rem;
+  ${({ theme }) => theme.MQ.l} {
+    max-width: 35rem;
+  }
+`
