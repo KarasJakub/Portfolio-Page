@@ -115,7 +115,6 @@ const Contact = () => {
           </S.TopInputsWrapper>
           <S.Textarea
             {...register("message")}
-            // as="textarea"
             placeholder="Hey, I am writing to you..."
             className={errors.message && "error"}
             as={motion.textarea}
