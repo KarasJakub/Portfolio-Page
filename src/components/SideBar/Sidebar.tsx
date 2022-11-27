@@ -3,6 +3,7 @@ import * as S from "./SideBar.styled"
 import GitHubIcon from "assets/icons/Github.svg"
 import LinkedinIcon from "assets/icons/LinkedIn.svg"
 import MailIcon from "assets/icons/Mail.svg"
+import { motion } from "framer-motion"
 
 const Icons = [
   {
@@ -25,9 +26,17 @@ const Icons = [
 const Sidebar = () => {
   return (
     <S.SideBarWrapper>
-      {Icons.map(icon => (
+      {Icons.map((icon, index) => (
         <S.IconLink key={icon.name} href={icon.link} target="_blank">
-          <S.Icon src={icon.icon} alt={icon.name} key={icon.name} />
+          <S.Icon
+            src={icon.icon}
+            alt={icon.name}
+            key={icon.name}
+            as={motion.img}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 * index }}
+          />
         </S.IconLink>
       ))}
     </S.SideBarWrapper>
