@@ -91,6 +91,10 @@ const Navigation = () => {
                 ? sections.find(section => section.id === "contact").onClick()
                 : navigate("/")
             }
+            as={motion.button}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.2 }}
           >
             Contact
           </SButtons.NavigationButton>
