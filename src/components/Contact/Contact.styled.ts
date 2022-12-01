@@ -163,3 +163,4 @@ export const FormMessage = styled.div`
     display: block;
   }
 `
+export const MotionWrapper = styled.div``

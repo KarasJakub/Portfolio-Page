@@ -4,6 +4,9 @@ import SButtons from "components/Buttons/Buttons.styled"
 import ReCAPTCHA from "react-google-recaptcha"
 import emailjs from "@emailjs/browser"
 import { useForm } from "react-hook-form"
+import { motion, useAnimation } from "framer-motion"
+import { useInView } from "react-intersection-observer"
+import { useEffect } from "react"
 
 type FormData = {
   name: string
@@ -57,9 +60,28 @@ const Contact = () => {
     setFormError("Please check the correctness of the completed data again")
   }
 
+  const { ref, inView } = useInView({
+    threshold: 0.3
+  })
+  const animation = useAnimation()
+
+  useEffect(() => {
+    if (inView) {
+      animation.start({
+        opacity: 1
+      })
+    }
+  }, [inView])
   return (
-    <S.ContactWrapper>
-      <S.ContactTitle>Get in Touch</S.ContactTitle>
+    <S.ContactWrapper ref={ref}>
+      <S.ContactTitle
+        as={motion.h2}
+        animate={animation}
+        initial={{ opacity: 0 }}
+        transition={{ delay: 0.2 }}
+      >
+        Get in Touch
+      </S.ContactTitle>
       <S.FormWrapper>
         <S.Form
           ref={form}
@@ -72,6 +94,10 @@ const Contact = () => {
               type="text"
               placeholder="Name"
               className={errors.name && "error"}
+              as={motion.input}
+              animate={animation}
+              initial={{ opacity: 0 }}
+              transition={{ delay: 0.4 }}
             />
             <S.Input
               {...register("email", {
@@ -81,25 +107,46 @@ const Contact = () => {
               type="text"
               placeholder="E-mail"
               className={errors.email && "error"}
+              as={motion.input}
+              animate={animation}
+              initial={{ opacity: 0 }}
+              transition={{ delay: 0.6 }}
             />
           </S.TopInputsWrapper>
           <S.Textarea
             {...register("message")}
-            as="textarea"
             placeholder="Hey, I am writing to you..."
             className={errors.message && "error"}
+            as={motion.textarea}
+            animate={animation}
+            initial={{ opacity: 0 }}
+            transition={{ delay: 0.8 }}
           />
 
           <S.BottomWrapper>
-            <ReCAPTCHA
-              theme="dark"
-              sitekey="6Lcv2vIiAAAAAAGGWr5-nJWdDlUIyftdPCTdJyen"
-              onChange={() => setIsRecaptchaConfirmed(true)}
-              ref={recaptchaRef}
-            />
-            <SButtons.FormButton submit disabled={isLoading || isSuccess}>
-              send into space 😛
-            </SButtons.FormButton>
+            <S.MotionWrapper
+              as={motion.div}
+              animate={animation}
+              initial={{ opacity: 0 }}
+              transition={{ delay: 1 }}
+            >
+              <ReCAPTCHA
+                theme="dark"
+                sitekey="6Lcv2vIiAAAAAAGGWr5-nJWdDlUIyftdPCTdJyen"
+                onChange={() => setIsRecaptchaConfirmed(true)}
+                ref={recaptchaRef}
+              />
+            </S.MotionWrapper>
+            <S.MotionWrapper
+              as={motion.div}
+              animate={animation}
+              initial={{ opacity: 0 }}
+              transition={{ delay: 1.2 }}
+            >
+              <SButtons.FormButton submit disabled={isLoading || isSuccess}>
+                send into space 😛
+              </SButtons.FormButton>
+            </S.MotionWrapper>
           </S.BottomWrapper>
         </S.Form>
         <S.FormErrorMessage className={isSuccess ? "none" : "block"}>

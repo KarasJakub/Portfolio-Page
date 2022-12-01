@@ -13,6 +13,7 @@ export const BottomWrapper = styled.div`
   max-width: 36rem;
   margin: 0 auto;
   display: flex;
+  position: relative;
   ${({ theme }) => theme.MQ.m} {
     max-width: 50rem;
   }
@@ -60,6 +61,16 @@ export const LeftCell = styled.div`
 
 export const RightCell = styled.div`
   text-align: right;
+`
+export const Mail = styled.div`
+  text-align: center;
+  position: absolute;
+  bottom: -110%;
+  transform: translateX(40%);
+  ${({ theme }) => theme.MQ.m} {
+    left: 14%;
+    transform: unset;
+  }
 `
 
 export const BottomLeft = styled.div`

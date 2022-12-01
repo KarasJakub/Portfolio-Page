@@ -65,3 +65,4 @@ export const SectionTitle = styled.h2`
     font-size: 4rem;
   }
 `
+export const MotionWrapper = styled.div``
