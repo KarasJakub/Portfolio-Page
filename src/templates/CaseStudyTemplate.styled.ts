@@ -54,7 +54,7 @@ export const ImageWrapper = styled.div`
   padding: 1rem;
   position: relative;
   ${({ theme }) => theme.MQ.xl} {
-    border: 2px solid #04bcff;
+    border: 2px solid ${({ theme }) => theme.color.primary};
     &:before {
       content: "";
       display: block;
