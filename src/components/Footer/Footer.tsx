@@ -37,7 +37,10 @@ const Footer = () => {
             transition={{ delay: 0.4 }}
           >
             <S.SubLink>Follow me on</S.SubLink>
-            <S.Link href="mailto:contact@jakubkaras.pl" target="_blank">
+            <S.Link
+              href="https://www.linkedin.com/in/jakub-kara%C5%9B-825244238/"
+              target="_blank"
+            >
               linkedin
             </S.Link>
           </S.LeftCell>
@@ -62,10 +65,7 @@ const Footer = () => {
           transition={{ delay: 0.8 }}
         >
           <S.SubLink>Mail me by</S.SubLink>
-          <S.Link
-            href="https://www.linkedin.com/in/jakub-kara%C5%9B-825244238/"
-            target="_blank"
-          >
+          <S.Link href="mailto:contact@jakubkaras.pl" target="_blank">
             contact@jakubkaras.pl
           </S.Link>
         </S.Mail>

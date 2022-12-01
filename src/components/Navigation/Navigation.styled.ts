@@ -18,7 +18,6 @@ export const NavigationWrapper = styled.nav`
 
   &.showNav {
     opacity: 1;
-    padding: 0;
     background-image: linear-gradient(
       90deg,
       rgba(26, 56, 76, 1) 0%,

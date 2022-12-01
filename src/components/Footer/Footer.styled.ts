@@ -66,7 +66,11 @@ export const Mail = styled.div`
   text-align: center;
   position: absolute;
   bottom: -110%;
-  left: 14%;
+  transform: translateX(40%);
+  ${({ theme }) => theme.MQ.m} {
+    left: 14%;
+    transform: unset;
+  }
 `
 
 export const BottomLeft = styled.div`

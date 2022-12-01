@@ -56,7 +56,7 @@ const CaseStudiesButton = styled(motion.button)`
 `
 
 const FormButton = styled(ButtonComponent)`
-  padding: 15px 0;
+  padding: 15px;
   margin: 3rem 0;
   font-size: 1.8rem;
   max-width: 25rem;
