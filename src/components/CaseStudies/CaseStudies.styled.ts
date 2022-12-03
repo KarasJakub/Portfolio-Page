@@ -15,7 +15,7 @@ export const CardsWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  padding: 4rem 4rem;
+  padding: 0 4rem 4rem 4rem;
   flex-wrap: wrap;
 
   ${({ theme }) => theme.MQ.m} {
