@@ -28,7 +28,7 @@ const HeroButton = styled(motion.button)`
   box-shadow: 0px 0px 30px -16px rgba(255, 255, 255, 1);
   transition: 0.1s background-color ease-in-out;
   padding: 15px 35px;
-  margin-top: 3.5rem;
+  margin-top: 2rem;
   font-size: 1.8rem;
   color: ${({ theme }) => theme.color.grey};
 

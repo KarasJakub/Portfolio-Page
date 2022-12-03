@@ -81,7 +81,7 @@ export const Paragraph = styled.p`
   font-size: 2rem;
   font-weight: ${({ theme }) => theme.weight.regular};
   max-width: 60rem;
-  padding-top: 1rem;
+  padding-top: 1.5rem;
 
   a {
     color: ${({ theme }) => theme.color.primary};
