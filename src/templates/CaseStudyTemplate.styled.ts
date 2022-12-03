@@ -55,30 +55,6 @@ export const ImageWrapper = styled.div`
   position: relative;
   ${({ theme }) => theme.MQ.xl} {
     border: 2px solid ${({ theme }) => theme.color.primary};
-    &:before {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 100%;
-      max-width: 480px;
-      height: 255px;
-      bottom: -2px;
-      left: -5px;
-      border-left: 10px solid #101010;
-      border-bottom: 4px solid #101010;
-    }
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 100%;
-      max-width: 480px;
-      height: 255px;
-      top: -2px;
-      right: -5px;
-      border-right: 10px solid #101010;
-      border-top: 4px solid #101010;
-    }
   }
 `
 
