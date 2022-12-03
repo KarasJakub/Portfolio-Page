@@ -34,7 +34,7 @@ const About = () => {
           as={motion.h2}
           animate={animation}
           initial={{ opacity: 0 }}
-          transition={{ delay: 0.2 }}
+          transition={{ delay: 0.1 }}
         >
           About me
         </S.SectionTitle>
@@ -42,7 +42,7 @@ const About = () => {
           as={motion.p}
           animate={animation}
           initial={{ opacity: 0 }}
-          transition={{ delay: 0.4 }}
+          transition={{ delay: 0.2 }}
         >
           I&apos;m 19 years Junior Front-End Developer from{" "}
           <strong>Poland</strong>. My work is my passion, I{" "}
@@ -59,7 +59,7 @@ const About = () => {
           as={motion.p}
           animate={animation}
           initial={{ opacity: 0 }}
-          transition={{ delay: 0.6 }}
+          transition={{ delay: 0.3 }}
         >
           I&apos;m in 4th-grade Secondary School of Information Technology
         </S.SectionParagraph>
@@ -67,7 +67,7 @@ const About = () => {
           as={motion.p}
           animate={animation}
           initial={{ opacity: 0 }}
-          transition={{ delay: 0.8 }}
+          transition={{ delay: 0.4 }}
         >
           What technologies am I working with?
         </S.SectionParagraph>
@@ -76,7 +76,7 @@ const About = () => {
             as={motion.div}
             animate={animation}
             initial={{ opacity: 0 }}
-            transition={{ delay: 1 }}
+            transition={{ delay: 0.5 }}
           >
             <img src={GatsbyIcon} alt="Gatsby Icon" />
             <p>Gatsby.js</p>
@@ -85,7 +85,7 @@ const About = () => {
             as={motion.div}
             animate={animation}
             initial={{ opacity: 0 }}
-            transition={{ delay: 1.2 }}
+            transition={{ delay: 0.5 }}
           >
             <img src={ReactIcon} alt="React Icon" />
             <p>React.js</p>
@@ -94,7 +94,7 @@ const About = () => {
             as={motion.div}
             animate={animation}
             initial={{ opacity: 0 }}
-            transition={{ delay: 1.4 }}
+            transition={{ delay: 0.7 }}
           >
             <img src={TypeScriptIcon} alt="Typescript Icon" />
             <p>Typescript</p>
@@ -103,7 +103,7 @@ const About = () => {
             as={motion.div}
             animate={animation}
             initial={{ opacity: 0 }}
-            transition={{ delay: 1.6 }}
+            transition={{ delay: 0.8 }}
           >
             <img src={WebpackIcon} alt="Webpack Icon" />
             <p>Webpack</p>
@@ -112,7 +112,7 @@ const About = () => {
             as={motion.div}
             animate={animation}
             initial={{ opacity: 0 }}
-            transition={{ delay: 1.8 }}
+            transition={{ delay: 0.9 }}
           >
             <img src={NodeIcon} alt="Node.js Icon" />
             <p>Node.js</p>
@@ -121,7 +121,7 @@ const About = () => {
             as={motion.div}
             animate={animation}
             initial={{ opacity: 0 }}
-            transition={{ delay: 2 }}
+            transition={{ delay: 1 }}
           >
             <img src={JavaScriptIcon} alt="Javascript Icon" />
             <p>Javascript</p>
@@ -132,7 +132,7 @@ const About = () => {
         as={motion.div}
         animate={animation}
         initial={{ opacity: 0 }}
-        transition={{ delay: 2.2 }}
+        transition={{ delay: 1.2 }}
       >
         <S.Image image={getImage(Personal_Image)} alt="Photo of author" />
       </S.MotionWrapper>
