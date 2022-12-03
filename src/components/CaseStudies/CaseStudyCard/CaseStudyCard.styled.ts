@@ -4,7 +4,6 @@ import styled from "styled-components"
 
 export const CardImage = styled(GatsbyImage)`
   width: 100%;
-  z-index: -1;
 `
 
 export const Title = styled.h3`
@@ -45,7 +44,6 @@ export const TechnologiesBar = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${({ theme }) => theme.color.dark};
   opacity: 0;
   transition: 0.5s ease-in-out;
   transition-property: opacity;

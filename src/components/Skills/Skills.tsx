@@ -24,7 +24,7 @@ const steps = [
   {
     name: "Design skills",
     description:
-      "I adore pretty websites, but design just isn’t my cup of tea. I prefer coding websites rather than designing them 😛. I designed several websites in my career, but I haven’t made any UI/UX course, I like the idea of Just-In-Time-Learning 😛. For occasionally designing I use Figma",
+      "I adore pretty websites, but design just isn’t my cup of tea. I prefer coding websites rather than designing them. I designed several websites in my career, but I haven’t made any UI/UX course, I like the idea of Just-In-Time-Learning 😛. For occasionally designing I use Figma",
     image: Design_Icon
   }
 ]

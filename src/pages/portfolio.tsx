@@ -3,7 +3,9 @@ import Navigation from "components/Navigation/Navigation"
 import Footer from "components/Footer/Footer"
 import SEO from "components/SEO/SEO"
 import AllProjects from "components/AllProjects/AllProjects"
-const portfolio = () => {
+import GradientWrapper from "components/GradientWrapper/GradientWrapper"
+
+const Portfolio = () => {
   return (
     <>
       <SEO title="Jakub Karaś - Front End Developer Portfolio">
@@ -13,10 +15,12 @@ const portfolio = () => {
         the web.
       </SEO>
       <Navigation />
-      <AllProjects />
-      <Footer />
+      <GradientWrapper>
+        <AllProjects />
+        <Footer />
+      </GradientWrapper>
     </>
   )
 }
 
-export default portfolio
+export default Portfolio
