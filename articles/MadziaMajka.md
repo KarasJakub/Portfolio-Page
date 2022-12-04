@@ -1,11 +1,11 @@
 ---
-title: "Lorem ipsum"
-description: "Lorem ipsum"
-firstTechnology: "Lorem ipsum"
-secondTechnology: "Lorem ipsum"
-slug: "Lorem ipsum"
-photo: ../src/assets/images/API.png
-alt: "Lorem ipsum"
+title: "madziamajka.pl"
+description: "Personal trainer showcase page"
+firstTechnology: "JavaScript"
+secondTechnology: "HTML CSS"
+slug: "madziamajka"
+photo: ../src/assets/images/MadziaMajka_Image.png
+alt: "madziamajka page photo"
 ---
 
 <p>rticle evident arrived express highest men did boy. Mistress sensible entirely am so. Quick can manor smart money hopes worth too. Comfort produce husband boy her had hearing. Law others theirs passed but wishes. You day real less till dear read. Considered use dispatched melancholy sympathize discretion led. Oh feel if up to till like.

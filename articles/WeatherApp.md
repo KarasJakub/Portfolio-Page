@@ -1,6 +1,6 @@
 ---
 title: "Weather App API"
-description: "Name were we at hope. Remainder household direction zealously the unwilling bad lorem ipsum dolor sit amen Lose and gay ham sake met that. "
+description: "My very first contact with fetching content with API and one of my first’s projects build using webpack and npm"
 firstTechnology: "JavaScript"
 secondTechnology: "Weather API"
 slug: "weather"
