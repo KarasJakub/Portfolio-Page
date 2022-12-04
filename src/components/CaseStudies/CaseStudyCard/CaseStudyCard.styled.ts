@@ -9,6 +9,8 @@ export const CardImage = styled(GatsbyImage)`
 export const Title = styled.h3`
   font-family: Montserrat, sans-serif;
   color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
   font-size: 2.5rem;
   font-weight: 600;
   position: absolute;
@@ -23,13 +25,15 @@ export const Title = styled.h3`
 
 export const Paragraph = styled.p`
   font-family: Montserrat, sans-serif;
-  color: ${({ theme }) => theme.color.darkgrey};
+  color: white;
   font-size: 1.5rem;
   position: absolute;
   text-align: center;
   width: 90%;
   padding-bottom: 2rem;
   transform: translateY(14rem);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
   transition: 0.2s ease-in-out;
   transition-property: transform opacity;
   opacity: 0;

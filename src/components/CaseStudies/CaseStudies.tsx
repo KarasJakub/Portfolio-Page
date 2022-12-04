@@ -24,6 +24,7 @@ const CaseStudies = () => {
               firstTechnology
               secondTechnology
               alt
+              key
               photo {
                 childImageSharp {
                   gatsbyImageData
@@ -78,6 +79,7 @@ const CaseStudies = () => {
                     image={frontmatter.photo.childImageSharp.gatsbyImageData}
                     alt={frontmatter.alt}
                     url={"/portfolio/" + frontmatter.slug}
+                    key={frontmatter.key}
                   />
                 </S.MotionWrapper>
               </>

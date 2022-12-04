@@ -53,6 +53,7 @@ export const TitleParagraph = styled.p`
 export const ImageWrapper = styled.div`
   padding: 1rem;
   position: relative;
+  max-width: 50rem;
   ${({ theme }) => theme.MQ.xl} {
     border: 2px solid ${({ theme }) => theme.color.primary};
   }
