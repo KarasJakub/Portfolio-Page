@@ -7,6 +7,7 @@ slug: "jakubkaras"
 photo: ../src/assets/images/JakubKaras_Image.png
 alt: "jakubkaras page photo"
 key: "4"
+destination: "https://jakubkaras.pl/"
 ---
 
 <p>

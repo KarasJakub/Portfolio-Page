@@ -7,6 +7,7 @@ slug: "weather"
 photo: ../src/assets/images/API.png
 alt: "Page photo"
 key: "3"
+destination: "https://jakubkaras.pl/"
 ---
 
 <p>

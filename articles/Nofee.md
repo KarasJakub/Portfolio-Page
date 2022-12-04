@@ -7,6 +7,7 @@ slug: "nofee"
 photo: ../src/assets/images/Nofee_Image.png
 alt: "nofee page photo"
 key: "1"
+destination: "https://niedlarachunkow.pl/"
 ---
 
 <p>

@@ -7,6 +7,7 @@ slug: "madziamajka"
 photo: ../src/assets/images/MadziaMajka_Image.png
 alt: "madziamajka page photo"
 key: "5"
+destination: "https://madziamajka.pl/"
 ---
 
 <p>

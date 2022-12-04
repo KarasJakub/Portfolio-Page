@@ -7,6 +7,7 @@ slug: "modernitycloud"
 photo: ../src/assets/images/ModernityCloud_Image.png
 alt: "modernitycloud page photo"
 key: "2"
+destination: "https://modernitycloud.pl/"
 ---
 
 <p>

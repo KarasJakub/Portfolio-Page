@@ -7,6 +7,7 @@ import { GatsbyImage, getImage, IGatsbyImageData } from "gatsby-plugin-image"
 import SEO from "components/SEO/SEO"
 import { motion } from "framer-motion"
 import GradientWrapper from "components/GradientWrapper/GradientWrapper"
+import SButtons from "components/Buttons/Buttons.styled"
 
 interface Props {
   data: {
@@ -18,6 +19,7 @@ interface Props {
         description: string
         alt: string
         photo: IGatsbyImageData
+        destination: string
       }
     }
   }
@@ -54,6 +56,13 @@ const CaseStudyTemplate = ({ data }: Props) => {
                 >
                   {data.markdownRemark.frontmatter.description}
                 </S.TitleParagraph>
+                <a
+                  href={data.markdownRemark.frontmatter.destination}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <SButtons.TemplateButton>Show</SButtons.TemplateButton>
+                </a>
               </S.TitleContainer>
               <S.ImageWrapper
                 as={motion.div}
@@ -97,6 +106,7 @@ export const query = graphql`
         title
         description
         alt
+        destination
         photo {
           childImageSharp {
             gatsbyImageData
