@@ -1,4 +1,4 @@
-<img alt="" src="" width="150" />
+<img alt="/src//assets/icons/favicon.svg" src="" width="150" />
 
 # jakubkaras.pl
 
