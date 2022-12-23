@@ -66,7 +66,13 @@ export const ContentContainer = styled.article`
   margin: 4rem 0;
   color: #707070;
   & > p {
+    font-family: Montserrat, sans-serif;
+    font-size: 1.6rem;
+    padding: 2rem 0 0 0;
     line-height: 3rem;
+    & > strong {
+      color: ${({ theme }) => theme.color.primary};
+    }
   }
   & > h3 {
     color: white;
