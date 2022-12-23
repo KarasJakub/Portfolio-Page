@@ -29,7 +29,7 @@ const CaseStudyTemplate = ({ data }: Props) => {
   return (
     <>
       <SEO
-        title={data.markdownRemark.frontmatter.title}
+        title={`Project: ${data.markdownRemark.frontmatter.title}`}
         key={data.markdownRemark.frontmatter.title}
       >
         {data.markdownRemark.frontmatter.description}

@@ -44,13 +44,12 @@ const About = () => {
           initial={{ opacity: 0 }}
           transition={{ delay: 0.2 }}
         >
-          I&apos;m 19 years Junior Front-End Developer from{" "}
-          <strong>Poland</strong>. My work is my passion, I{" "}
-          <strong>enjoy</strong> building websites and developing my skillset
-          because, as I said I&apos;m really into the idea of{" "}
-          <strong>creating something out of nothing</strong> on the web. I
-          started back in 2020 with fundamentals of web development and started
-          creating my first&apos;s websites. At this point,{" "}
+          I&apos;m Junior Front-End Developer from <strong>Poland</strong>. My
+          work is my passion, I <strong>enjoy</strong> building websites and
+          developing my skillset because, as I said I&apos;m really into the
+          idea of <strong>creating something out of nothing</strong> on the web.
+          I started back in 2020 with fundamentals of web development and
+          started creating my first&apos;s websites. At this point,{" "}
           <strong>my main focus</strong> is building modern and good-looking
           websites along with new technologies, especially my favorite –{" "}
           <strong>React.js</strong>.

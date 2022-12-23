@@ -4,6 +4,7 @@ import Footer from "components/Footer/Footer"
 import SEO from "components/SEO/SEO"
 import AllProjects from "components/AllProjects/AllProjects"
 import GradientWrapper from "components/GradientWrapper/GradientWrapper"
+import Sidebar from "components/SideBar/Sidebar"
 
 const Portfolio = () => {
   return (
@@ -14,6 +15,7 @@ const Portfolio = () => {
         I&apos;m really into the idea of creating something out of nothing on
         the web.
       </SEO>
+      <Sidebar />
       <Navigation />
       <GradientWrapper>
         <AllProjects />

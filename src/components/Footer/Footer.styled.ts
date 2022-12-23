@@ -4,7 +4,6 @@ export const Footer = styled.footer`
   width: 100%;
   max-width: 50rem;
   margin: 0 auto;
-  margin-top: 10rem;
   display: flex;
   flex-direction: column;
 `
