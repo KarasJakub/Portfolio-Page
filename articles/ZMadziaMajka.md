@@ -35,6 +35,7 @@ to work under time pressure and stress.
  <div id="technologiesWrapper">
    <img src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg" alt="css icon" class="technologiesIcon">
    <img src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg" alt="html icon" class="technologiesIcon">
+   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript icon" class="technologiesIcon">
    <img src="https://www.vectorlogo.zone/logos/formspree/formspree-icon.svg" alt="formspree icon" class="technologiesIcon">
    <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma icon" class="technologiesIcon">
 </div>
