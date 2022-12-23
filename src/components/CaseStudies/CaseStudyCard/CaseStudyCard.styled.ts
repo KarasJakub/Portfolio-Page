@@ -4,6 +4,8 @@ import styled from "styled-components"
 
 export const CardImage = styled(GatsbyImage)`
   width: 100%;
+  transition: 0.5s ease-in-out;
+  transition-property: opacity, filter;
 `
 
 export const Title = styled.h3`
@@ -17,6 +19,7 @@ export const Title = styled.h3`
   bottom: 50%;
   transition: 0.2s ease-in-out;
   transition-property: transform opacity;
+  opacity: 0;
 
   ${({ theme }) => theme.MQ.xxl} {
     font-size: 3.2rem;
@@ -31,7 +34,6 @@ export const Paragraph = styled.p`
   text-align: center;
   width: 90%;
   padding-bottom: 2rem;
-  transform: translateY(14rem);
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
   transition: 0.2s ease-in-out;
@@ -79,12 +81,17 @@ export const CardWrapper = styled.div`
     cursor: pointer;
   }
 
+  &:hover ${CardImage} {
+    filter: grayscale(100%);
+    opacity: 0.5;
+  }
+
   &:hover ${Paragraph} {
-    transform: translateY(1.5rem);
     opacity: 1;
   }
   &:hover ${Title} {
     transform: translateY(-6rem);
+    opacity: 1;
   }
   &:hover ${TechnologiesBar} {
     opacity: 1;
