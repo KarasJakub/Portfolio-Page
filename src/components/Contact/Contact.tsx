@@ -97,7 +97,7 @@ const Contact = () => {
               as={motion.input}
               animate={animation}
               initial={{ opacity: 0 }}
-              transition={{ delay: 0.4 }}
+              transition={{ delay: 0.3 }}
             />
             <S.Input
               {...register("email", {
@@ -110,7 +110,7 @@ const Contact = () => {
               as={motion.input}
               animate={animation}
               initial={{ opacity: 0 }}
-              transition={{ delay: 0.6 }}
+              transition={{ delay: 0.4 }}
             />
           </S.TopInputsWrapper>
           <S.Textarea
@@ -120,7 +120,7 @@ const Contact = () => {
             as={motion.textarea}
             animate={animation}
             initial={{ opacity: 0 }}
-            transition={{ delay: 0.8 }}
+            transition={{ delay: 0.5 }}
           />
 
           <S.BottomWrapper>
@@ -128,7 +128,7 @@ const Contact = () => {
               as={motion.div}
               animate={animation}
               initial={{ opacity: 0 }}
-              transition={{ delay: 1 }}
+              transition={{ delay: 0.6 }}
             >
               <ReCAPTCHA
                 theme="dark"
@@ -141,7 +141,7 @@ const Contact = () => {
               as={motion.div}
               animate={animation}
               initial={{ opacity: 0 }}
-              transition={{ delay: 1.2 }}
+              transition={{ delay: 0.7 }}
             >
               <SButtons.FormButton submit disabled={isLoading || isSuccess}>
                 send into space 😛

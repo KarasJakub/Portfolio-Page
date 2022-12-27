@@ -80,7 +80,7 @@ const Navigation = () => {
               as={motion.li}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 * index }}
+              transition={{ delay: 0.1 * index }}
             >
               {link.content}
             </S.NavigationItem>
@@ -94,7 +94,7 @@ const Navigation = () => {
             as={motion.button}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.2 }}
+            transition={{ delay: 0.7 }}
           >
             Contact
           </SButtons.NavigationButton>

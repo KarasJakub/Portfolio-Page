@@ -18,6 +18,7 @@ export const NavigationWrapper = styled.nav`
 
   &.showNav {
     opacity: 1;
+    visibility: unset;
     background-image: linear-gradient(
       90deg,
       rgba(26, 56, 76, 1) 0%,
@@ -25,14 +26,19 @@ export const NavigationWrapper = styled.nav`
       rgba(26, 56, 76, 1) 100%
     );
     box-shadow: inset 0px 53px 70px 40px rgba(15, 26, 32, 1);
+    ${({ theme }) => theme.MQ.l} {
+      padding: unset;
+    }
   }
 
   &.showNavTop {
     opacity: 1;
+    visibility: unset;
   }
 
   &.hideNav {
     opacity: 0;
+    visibility: hidden;
   }
 `
 

@@ -24,6 +24,7 @@ const CaseStudies = () => {
               firstTechnology
               secondTechnology
               alt
+              key
               photo {
                 childImageSharp {
                   gatsbyImageData
@@ -60,26 +61,29 @@ const CaseStudies = () => {
           My Projects
         </S.SectionTitle>
         <S.CardsWrapper>
-          {edges.map(({ node: { frontmatter } }: any, index: number) => (
-            <>
-              <S.MotionWrapper
-                as={motion.div}
-                animate={animation}
-                initial={{ opacity: 0 }}
-                transition={{ delay: 0.2 * index }}
-              >
-                <CaseStudyCard
-                  title={frontmatter.title}
-                  description={frontmatter.description}
-                  firstTechnology={frontmatter.firstTechnology}
-                  secondTechnology={frontmatter.secondTechnology}
-                  image={frontmatter.photo.childImageSharp.gatsbyImageData}
-                  alt={frontmatter.alt}
-                  url={"/portfolio/" + frontmatter.slug}
-                />
-              </S.MotionWrapper>
-            </>
-          ))}
+          {edges
+            .slice(0, 4)
+            .map(({ node: { frontmatter } }: any, index: number) => (
+              <>
+                <S.MotionWrapper
+                  as={motion.div}
+                  animate={animation}
+                  initial={{ opacity: 0 }}
+                  transition={{ delay: 0.2 * index }}
+                >
+                  <CaseStudyCard
+                    title={frontmatter.title}
+                    description={frontmatter.description}
+                    firstTechnology={frontmatter.firstTechnology}
+                    secondTechnology={frontmatter.secondTechnology}
+                    image={frontmatter.photo.childImageSharp.gatsbyImageData}
+                    alt={frontmatter.alt}
+                    url={"/portfolio/" + frontmatter.slug}
+                    key={frontmatter.key}
+                  />
+                </S.MotionWrapper>
+              </>
+            ))}
         </S.CardsWrapper>
         <Link to="/portfolio">
           <SButtons.CaseStudiesButton

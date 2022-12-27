@@ -3,7 +3,10 @@ import Navigation from "components/Navigation/Navigation"
 import Footer from "components/Footer/Footer"
 import SEO from "components/SEO/SEO"
 import AllProjects from "components/AllProjects/AllProjects"
-const portfolio = () => {
+import GradientWrapper from "components/GradientWrapper/GradientWrapper"
+import Sidebar from "components/SideBar/Sidebar"
+
+const Portfolio = () => {
   return (
     <>
       <SEO title="Jakub Karaś - Front End Developer Portfolio">
@@ -12,11 +15,14 @@ const portfolio = () => {
         I&apos;m really into the idea of creating something out of nothing on
         the web.
       </SEO>
+      <Sidebar />
       <Navigation />
-      <AllProjects />
-      <Footer />
+      <GradientWrapper>
+        <AllProjects />
+        <Footer />
+      </GradientWrapper>
     </>
   )
 }
 
-export default portfolio
+export default Portfolio

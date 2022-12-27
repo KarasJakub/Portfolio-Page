@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 export const GradientWrapper = styled.div`
   width: 100%;
+  min-height: 100vh;
   background: rgb(26, 56, 76);
   box-shadow: inset 0px 30px 70px 70px rgba(15, 26, 32, 1);
   overflow: hidden;

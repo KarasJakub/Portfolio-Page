@@ -4,18 +4,22 @@ import styled from "styled-components"
 
 export const CardImage = styled(GatsbyImage)`
   width: 100%;
-  z-index: -1;
+  transition: 0.5s ease-in-out;
+  transition-property: opacity, filter;
 `
 
 export const Title = styled.h3`
   font-family: Montserrat, sans-serif;
   color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
   font-size: 2.5rem;
   font-weight: 600;
   position: absolute;
   bottom: 50%;
   transition: 0.2s ease-in-out;
   transition-property: transform opacity;
+  opacity: 0;
 
   ${({ theme }) => theme.MQ.xxl} {
     font-size: 3.2rem;
@@ -24,13 +28,14 @@ export const Title = styled.h3`
 
 export const Paragraph = styled.p`
   font-family: Montserrat, sans-serif;
-  color: ${({ theme }) => theme.color.darkgrey};
+  color: white;
   font-size: 1.5rem;
   position: absolute;
   text-align: center;
   width: 90%;
   padding-bottom: 2rem;
-  transform: translateY(14rem);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
   transition: 0.2s ease-in-out;
   transition-property: transform opacity;
   opacity: 0;
@@ -45,7 +50,6 @@ export const TechnologiesBar = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${({ theme }) => theme.color.dark};
   opacity: 0;
   transition: 0.5s ease-in-out;
   transition-property: opacity;
@@ -77,12 +81,17 @@ export const CardWrapper = styled.div`
     cursor: pointer;
   }
 
+  &:hover ${CardImage} {
+    filter: grayscale(100%);
+    opacity: 0.5;
+  }
+
   &:hover ${Paragraph} {
-    transform: translateY(1.5rem);
     opacity: 1;
   }
   &:hover ${Title} {
     transform: translateY(-6rem);
+    opacity: 1;
   }
   &:hover ${TechnologiesBar} {
     opacity: 1;

@@ -20,7 +20,7 @@ const Hero = () => {
             as={motion.p}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.2 }}
+            transition={{ delay: 1.3 }}
           >
             Hello, I am
           </S.PreName>
@@ -28,7 +28,7 @@ const Hero = () => {
             as={motion.h2}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.5 }}
+            transition={{ delay: 1.4 }}
           >
             Jakub Karaś.
           </S.BigHeading>
@@ -36,7 +36,7 @@ const Hero = () => {
             as={motion.h1}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.8 }}
+            transition={{ delay: 1.5 }}
           >
             I create <strong> something out of nothing</strong>.
           </S.SmallHeading>
@@ -44,26 +44,17 @@ const Hero = () => {
             as={motion.p}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 2 }}
+            transition={{ delay: 1.6 }}
           >
             I&apos;m Junior Front-End Developer focused on building and
             sometimes designing modern, fast and good-looking websites.
-            Currently, I&apos;m working in{" "}
-            <a
-              href="https://ModernityCloud.pl"
-              target="_blank"
-              rel="noreferrer"
-            >
-              ModernityCloud
-            </a>
-            .
           </S.Paragraph>
           <SButtons.HeroButton
             onClick={portfolioSection.onClick}
             as={motion.button}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 2.2 }}
+            transition={{ delay: 1.7 }}
           >
             Check my work!
           </SButtons.HeroButton>
@@ -74,7 +65,7 @@ const Hero = () => {
           as={motion.img}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 2.4, duration: 0.5 }}
+          transition={{ delay: 1.9, duration: 0.5 }}
         />
       </S.HeroWrapper>
     </>

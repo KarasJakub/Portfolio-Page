@@ -4,7 +4,6 @@ export const Footer = styled.footer`
   width: 100%;
   max-width: 50rem;
   margin: 0 auto;
-  margin-top: 10rem;
   display: flex;
   flex-direction: column;
 `
@@ -13,7 +12,10 @@ export const BottomWrapper = styled.div`
   max-width: 36rem;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   position: relative;
+  justify-content: center;
+  padding-bottom: 2rem;
   ${({ theme }) => theme.MQ.m} {
     max-width: 50rem;
   }
@@ -64,13 +66,7 @@ export const RightCell = styled.div`
 `
 export const Mail = styled.div`
   text-align: center;
-  position: absolute;
-  bottom: -110%;
-  transform: translateX(40%);
-  ${({ theme }) => theme.MQ.m} {
-    left: 14%;
-    transform: unset;
-  }
+  align-self: center;
 `
 
 export const BottomLeft = styled.div`

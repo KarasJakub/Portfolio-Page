@@ -31,17 +31,18 @@ export default function Home() {
         <Section id="about">
           <About />
         </Section>
+
+        <Section id="portfolio">
+          <CaseStudies />
+        </Section>
+        <Section id="skills">
+          <Skills />
+        </Section>
+        <Section id="contact">
+          <Contact />
+        </Section>
+        <Footer />
       </GradientWrapper>
-      <Section id="portfolio">
-        <CaseStudies />
-      </Section>
-      <Section id="skills">
-        <Skills />
-      </Section>
-      <Section id="contact">
-        <Contact />
-      </Section>
-      <Footer />
     </>
   )
 }
