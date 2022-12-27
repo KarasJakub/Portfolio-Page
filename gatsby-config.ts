@@ -36,9 +36,6 @@ const config: GatsbyConfig = {
             quality: 100,
           },
           },
-          {
-            resolve: 'gatsby-remark-copy-linked-files',
-          }
         ]
       }
     },
