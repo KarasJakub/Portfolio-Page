@@ -8,18 +8,11 @@ export const AboutWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background: rgb(17, 17, 17); */
-  /* background: linear-gradient(
-    0deg,
-    rgba(17, 17, 17, 1) 0%,
-    rgba(17, 17, 17, 1) 90%,
-    rgba(14, 24, 30, 1) 100%
-  ); */
 
   ${({ theme }) => theme.MQ.l} {
     flex-direction: row-reverse;
     justify-content: center;
-    padding: 30rem 0 30rem 0;
+    padding: 15rem 0 30rem 0;
   }
 `
 

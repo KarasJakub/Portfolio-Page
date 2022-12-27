@@ -15,7 +15,7 @@ import { useEffect } from "react"
 const About = () => {
   const { Personal_Image } = useImagesContext()
   const { ref, inView } = useInView({
-    threshold: 0.3
+    threshold: 0.4
   })
   const animation = useAnimation()
 

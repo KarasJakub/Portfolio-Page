@@ -10,6 +10,7 @@ export const HeroWrapper = styled.section`
   justify-content: center;
   ${({ theme }) => theme.MQ.m} {
     height: 100vh;
+    max-height: 110rem;
   }
   ${({ theme }) => theme.MQ.l} {
     flex-direction: row;
@@ -33,6 +34,7 @@ export const PreName = styled.p`
   color: ${({ theme }) => theme.color.primary};
   font-size: 1.6rem;
   font-family: Montserrat, sans-serif;
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 1);
   ${({ theme }) => theme.MQ.xl} {
     font-size: 2rem;
   }

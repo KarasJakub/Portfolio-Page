@@ -8,6 +8,7 @@ import SEO from "components/SEO/SEO"
 import { motion } from "framer-motion"
 import GradientWrapper from "components/GradientWrapper/GradientWrapper"
 import SButtons from "components/Buttons/Buttons.styled"
+import Sidebar from "components/SideBar/Sidebar"
 
 interface Props {
   data: {
@@ -34,6 +35,7 @@ const CaseStudyTemplate = ({ data }: Props) => {
       >
         {data.markdownRemark.frontmatter.description}
       </SEO>
+      <Sidebar />
       <GradientWrapper>
         <Navigation />
         <S.MainContainer>
@@ -61,7 +63,14 @@ const CaseStudyTemplate = ({ data }: Props) => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <SButtons.TemplateButton>Show</SButtons.TemplateButton>
+                  <SButtons.TemplateButton
+                    as={motion.button}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.7 }}
+                  >
+                    Show
+                  </SButtons.TemplateButton>
                 </a>
               </S.TitleContainer>
               <S.ImageWrapper
