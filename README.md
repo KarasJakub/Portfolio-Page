@@ -1,6 +1,4 @@
-<img alt="" src="" width="150" />
-
-# landing-dev.jakubkaras.pl (jakubkaras.pl)
+# jakubkaras.pl
 
 ## Status: `In progress`
 
@@ -10,7 +8,9 @@ Personal Portfolio Page
 
 ## Technologies
 
-- React
+- React(Gatsby)
+- Typescript
+- styled-components
 
 ## Setup
 
@@ -18,11 +18,10 @@ Personal Portfolio Page
 ## Setup and run app
 - run 'yarn'
 - create .env file
-- run 'yarn start'
+- run 'yarn dev'
 
 ## Available commands
 - dev # developing site
-- start # clean develop
 - build # production build
 - serve # serving production build
 - clean # cleaning cache

@@ -1,4 +1,5 @@
 import type { GatsbyConfig } from "gatsby"
+import "dotenv/config"
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -19,13 +20,33 @@ const config: GatsbyConfig = {
       }
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "markdown",
+        path: "./articles/"
+      }
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+          resolve: 'gatsby-remark-images',
+          options: {
+            quality: 100,
+          },
+          },
+        ]
+      }
+    },
+    {
       resolve: `gatsby-plugin-webfonts`,
       options: {
         fonts: {
           google: [
             {
-              family: "Poppins",
-              variants: ["300", "400", "500", "700", "800"],
+              family: "Montserrat",
+              variants: ["300", "400", "500", "600", "700", "800"],
               subsets: ["latin-ext"]
             }
           ]

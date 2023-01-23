@@ -1,5 +1,30 @@
-# Changelog
+<img alt="ModernityCloud Logo" src="/src//assets/icons/favicon.svg" width="150" />
 
-All notable changes to this project will be documented in this file.
+# jakubkaras
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
+## Status: `In progress`
+
+## Description
+
+My own Personal Portfolio Website
+
+## Technologies
+
+- React(Gatsby)
+- Typescript
+- styled-components
+
+## Setup
+
+```bash
+## Setup and run app
+- run 'yarn'
+- create .env file
+- run 'yarn dev'
+
+## Available commands
+- dev # developing site
+- build # production build
+- serve # serving production build
+- clean # cleaning cache
+```

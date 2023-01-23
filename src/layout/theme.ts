@@ -13,11 +13,16 @@ const theme = {
     light: 300,
     regular: 400,
     medium: 500,
+    semibold: 600,
     bold: 700,
     extraBold: 800
   },
   color: {
-    primary: ""
+    primary: "#752BFF",
+    dark: "#111111",
+    grey: "#CECECE",
+    darkgrey: "#A9A297",
+    darkpurple: "#38029A"
   },
   MQ: {
     xs: `@media (min-width: ${breakpoints.xs}em)`,

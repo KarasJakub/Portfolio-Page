@@ -1,8 +1,8 @@
 {
   "name": "personal-portfilio-page",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "description": "personal-portfilio-page",
+  "description": "personal portfilio page",
   "author": "Jakub Karaś",
   "keywords": [
     "gatsby"
@@ -19,10 +19,14 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.9.1",
+    "@types/react-google-recaptcha": "^2.1.5",
     "@types/react-helmet": "^6.1.5",
     "autoprefixer": "^10.4.11",
     "babel-plugin-styled-components": "^2.0.7",
+    "dotenv": "^16.0.3",
     "eslint-config-prettier": "^8.5.0",
+    "framer-motion": "^7.6.12",
     "gatsby": "^4.23.0",
     "gatsby-plugin-image": "^2.23.0",
     "gatsby-plugin-react-svg": "^3.1.0",
@@ -30,11 +34,17 @@
     "gatsby-plugin-sharp": "^4.23.0",
     "gatsby-plugin-styled-components": "^5.23.0",
     "gatsby-plugin-webfonts": "^2.2.2",
+    "gatsby-remark-images": "6.24.0",
     "gatsby-source-filesystem": "^4.23.0",
+    "gatsby-transformer-remark": "5.24.0",
     "gatsby-transformer-sharp": "^4.23.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-google-recaptcha": "^2.1.0",
     "react-helmet": "^6.1.0",
+    "react-hook-form": "^7.39.3",
+    "react-intersection-observer": "^9.4.1",
+    "react-scroll-section": "^3.2.5",
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
