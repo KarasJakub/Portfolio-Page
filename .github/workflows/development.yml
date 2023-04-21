@@ -1,0 +1,44 @@
+on:
+  workflow_dispatch:
+
+name: Development Build and Deploy
+
+jobs:
+  build-and-deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use Node.js 18.14.0
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: "18.14.0"
+
+      - name: Get code
+        uses: actions/checkout@v2
+        with:
+          lfs: true
+
+      - name: Fetch LFS objects
+        run: git lfs checkout
+
+      - name: Create env file
+        run: |
+          touch .env
+          echo GATSBY_EMAILJS_SERVICE_ID=${{ vars.GATSBY_EMAILJS_SERVICE_ID }} >> .env
+          echo GATSBY_EMAILJS_TEMPLATE_MAIN_ID=${{ vars.GATSBY_EMAILJS_TEMPLATE_MAIN_ID }} >> .env
+          echo GATSBY_EMAILJS_PUBLIC_KEY=${{ vars.GATSBY_EMAILJS_PUBLIC_KEY }} >> .env
+
+      - name: Build Project
+        run: |
+          yarn
+          yarn build
+
+      - name: Upload files
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ vars.DEPLOY_KEY }}
+          SOURCE: "public/"
+          REMOTE_HOST: ${{ vars.DEPLOY_HOST }}
+          REMOTE_USER: ${{ vars.DEPLOY_USER }}
+          REMOTE_PORT: ${{ vars.DEPLOY_PORT }}
+          TARGET: "/home/srv55868/domains/landing-dev.jakubkaras.pl/public_html"
