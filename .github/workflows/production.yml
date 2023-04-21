@@ -1,0 +1,50 @@
+on:
+  workflow_dispatch:
+
+name: Production Build and Deploy
+
+jobs:
+  build-and-deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use Node.js 18.14.0
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: "18.14.0"
+
+      - name: Get code
+        uses: actions/checkout@v2
+        with:
+          lfs: true
+
+      # - name: Fetch LFS objects
+      #   run: git lfs checkout
+
+      # - name: Create env file
+      #   run: |
+      #     touch .env
+      #     echo GATSBY_RECAPTCHA_SITE_KEY=${{ secrets.GATSBY_RECAPTCHA_SITE_KEY }} >> .env
+      #     echo GATSBY_EMAILJS_SERVICE_ID=${{ secrets.GATSBY_EMAILJS_SERVICE_ID }} >> .env
+      #     echo GATSBY_EMAILJS_TEMPLATE_MAIN_ID=${{ secrets.GATSBY_EMAILJS_TEMPLATE_MAIN_ID }} >> .env
+      #     echo GATSBY_EMAILJS_TEMPLATE_NUMBER_ID=${{ secrets.GATSBY_EMAILJS_TEMPLATE_NUMBER_ID }} >> .env
+      #     echo GATSBY_EMAILJS_PUBLIC_KEY=${{ secrets.GATSBY_EMAILJS_PUBLIC_KEY }} >> .env
+      #     echo GA_TRACKING_ID=${{ secrets.GA_TRACKING_ID }} >> .env
+      #     echo FACEBOOK_PIXEL_ID=${{ secrets.FACEBOOK_PIXEL_ID }} >> .env
+      #     echo HOTJAR_TRACKING_ID=${{ secrets.HOTJAR_TRACKING_ID }} >> .env
+      #     echo FACEBOOK_PIXEL_ID=${{ secrets.FACEBOOK_PIXEL_ID }} >> .env
+      #     echo FACEBOOK_PIXEL_ID=${{ secrets.GATSBY_FACEBOOK_DOMAIN }} >> .env
+
+      # - name: Build Project
+      #   run: |
+      #     yarn
+      #     yarn build
+
+      # - name: Upload files
+      #   uses: easingthemes/ssh-deploy@main
+      #   env:
+      #     SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
+      #     SOURCE: "public/"
+      #     REMOTE_HOST: ${{ secrets.DEPLOY_HOST }}
+      #     REMOTE_USER: ${{ secrets.DEPLOY_USER }}
+      #     TARGET: "/home/nofee/public_html/"
