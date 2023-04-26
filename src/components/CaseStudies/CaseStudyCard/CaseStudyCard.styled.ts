@@ -6,6 +6,7 @@ export const CardImage = styled(GatsbyImage)`
   width: 100%;
   transition: 0.5s ease-in-out;
   transition-property: opacity, filter;
+  height: 28rem;
 `
 
 export const Title = styled.h3`
