@@ -3,7 +3,7 @@ title: "zetservice.dk"
 description: "ZetService - Recent (beautiful) showcase page for Danish cleaning company"
 firstTechnology: "Styled-Components"
 secondTechnology: "Gatsby"
-slug: "jakubkaras"
+slug: "zetservice"
 photo: ../src/assets/images/ZetService_Image.png
 alt: "zet-service page photo"
 key: "6"

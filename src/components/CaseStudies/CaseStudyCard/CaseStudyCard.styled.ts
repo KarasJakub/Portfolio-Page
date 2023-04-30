@@ -6,7 +6,7 @@ export const CardImage = styled(GatsbyImage)`
   width: 100%;
   transition: 0.5s ease-in-out;
   transition-property: opacity, filter;
-  height: 28rem;
+  max-height: 30rem;
 `
 
 export const Title = styled.h3`
@@ -71,8 +71,8 @@ export const CardWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   position: relative;
-  min-height: 24rem;
-  max-height: 32rem;
+  /* min-height: rem; */
+  max-height: 30rem;
   transition: 0.2s ease-in-out;
   transition-property: transform opacity;
   margin-bottom: 5rem;
