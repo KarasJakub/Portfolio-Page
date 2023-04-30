@@ -25,10 +25,7 @@ destination: "https://niedlarachunkow.pl/"
     </li>
     <li>
     <strong>Implemented</strong>
-    an automatic articles rendering system that
-    <strong>reduced</strong>
-    the time needed for content changes by
-    <strong>20%</strong>
+    an automatic articles rendering system
     </li>
     <li>
       Configured
