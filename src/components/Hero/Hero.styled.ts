@@ -104,3 +104,13 @@ export const Image = styled.img`
     margin: 0 0 0 10rem;
   }
 `
+
+export const ImageWrapper = styled.div`
+  width: 100%;
+  max-width: 66rem;
+  margin: 5rem auto;
+
+  ${({ theme }) => theme.MQ.xxl} {
+    margin: 0 0 0 10rem;
+  }
+`
