@@ -110,6 +110,19 @@ export const ImageWrapper = styled.div`
   max-width: 66rem;
   margin: 5rem auto;
 
+  & svg {
+    max-width: 37rem;
+    max-height: 30rem;
+    margin: 0;
+  }
+
+  ${({ theme }) => theme.MQ.m} {
+    & svg {
+      max-width: unset;
+      max-height: unset;
+    }
+  }
+
   ${({ theme }) => theme.MQ.xxl} {
     margin: 0 0 0 10rem;
   }
