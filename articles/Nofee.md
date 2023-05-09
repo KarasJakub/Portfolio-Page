@@ -19,7 +19,6 @@ destination: "https://niedlarachunkow.pl/"
       <strong>Tailwind.css</strong>
     </li>
     <li>
-      Taking part in brainstorming sessions with
       <strong>UX/UI</strong>
       designers
     </li>

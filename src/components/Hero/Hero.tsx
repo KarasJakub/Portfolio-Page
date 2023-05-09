@@ -551,6 +551,7 @@ const Hero = () => {
                   duration: 5,
                   repeat: Infinity,
                   repeatType: "reverse"
+                  // ease: "linear"
                 }}
               />
               <path
