@@ -104,3 +104,26 @@ export const Image = styled.img`
     margin: 0 0 0 10rem;
   }
 `
+
+export const ImageWrapper = styled.div`
+  width: 100%;
+  max-width: 66rem;
+  margin: 5rem auto;
+
+  & svg {
+    max-width: 37rem;
+    max-height: 30rem;
+    margin: 0;
+  }
+
+  ${({ theme }) => theme.MQ.m} {
+    & svg {
+      max-width: unset;
+      max-height: unset;
+    }
+  }
+
+  ${({ theme }) => theme.MQ.xxl} {
+    margin: 0 0 0 10rem;
+  }
+`
