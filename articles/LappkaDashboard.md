@@ -13,11 +13,11 @@ destination: ""
 <h3>Description</h3>
 
 <p>
-The primary goal of the Łappka application was to bring together animal shelters from Poland into one centralized platform. Through the management panel, shelters could register and efficiently manage their animals, staff, and volunteers. Simultaneously, the mobile app for clients allowed them to discover and adopt their beloved pets while also reporting any lost animals.
+The primary <strong>goal</strong> of the <strong>Łappka</strong> application was to bring together animal shelters from Poland into one <strong>centralized</strong> platform. Through the management panel, shelters could register and efficiently <strong>manage</strong> their animals, staff, and volunteers. Simultaneously, the <strong>mobile</strong> app for clients allowed them to discover and adopt their beloved pets while also <strong>reporting</strong> any lost animals.
 </p>
 
 <p>
-I had the opportunity to contribute to this project during my participation in the Mobitouch mLAB internship. We worked in three teams: Front-End (React), Back-End (.NET), and Mobile (Flutter) developers. Alongside two other Front-End developers, I was responsible for creating the Łappka Dashboard using React.js.
+I had the opportunity to contribute to this project during my participation in the <strong>Mobitouch</strong> mLAB internship. We worked in three teams: Front-End (React), Back-End (.NET), and Mobile (Flutter) developers. Alongside two other <strong>Front-End</strong> developers, I was responsible for creating the Łappka Dashboard using <strong>React.js</strong>.
 </p>
 
 <h3 id="technologies">Technologies</h3>
