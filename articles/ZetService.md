@@ -7,7 +7,7 @@ slug: "zetservice"
 photo: ../src/assets/images/ZetService_Image.png
 alt: "zet-service page photo"
 key: "6"
-destination: "https://zetservice.modernitycloud.pl/"
+destination: "https://zetservice.dk"
 ---
 
 <h3>Description</h3>

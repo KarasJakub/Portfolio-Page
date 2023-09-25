@@ -12,7 +12,7 @@ const steps = [
   {
     name: "Programming skills",
     description:
-      "After I learned the basics of creating pages, I started learning new technologies: webpack, node.js, react.js, etc… They were totally game changers, projects I’ve built with them taught (and still are teaching 😛) me so much about problem-solving, humility and specific mindset in programming. I think these experiences are making me a better developer every day. Currently, my leading technology is React (especially Gatsby).",
+      "After I learned the basics of creating pages, I started learning new technologies: webpack, node.js, react.js, etc… They were totally game changers, projects I’ve built with them taught (and still are teaching 😛) me so much about problem-solving, humility and specific mindset in programming. I think these experiences are making me a better developer every day. Currently, my leading technology is React.",
     image: Programming_Icon
   },
   {

@@ -6,7 +6,7 @@ secondTechnology: "Typescript"
 slug: "lappkalanding"
 photo: ../src/assets/images/Lappka/LappkaLanding_Image.png
 alt: "łappka page photo"
-key: "7"
+key: "8"
 destination: ""
 ---
 
